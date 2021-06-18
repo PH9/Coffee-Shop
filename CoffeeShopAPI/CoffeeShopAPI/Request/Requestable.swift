@@ -3,9 +3,9 @@ import Foundation
 public struct EmptyResponse: Decodable {}
 
 public protocol Requestable {
-  associatedtype ResponseType: Decodable
   var path: String { get }
   var expectedStatusCode: ClosedRange<Int> { get }
+  associatedtype ResponseType: Decodable
   func request(completion: @escaping (Result<ResponseType, RequestError>) -> Void) -> URLSessionDataTask
 }
 
