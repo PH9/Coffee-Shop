@@ -1,6 +1,7 @@
 import Foundation
 
 public protocol Requestable {
+  var method: HTTPMethod { get }
   var path: String { get }
   var expectedStatusCode: ClosedRange<Int> { get }
   associatedtype ResponseType: Decodable
@@ -8,12 +9,18 @@ public protocol Requestable {
 }
 
 public extension Requestable {
+  var method: HTTPMethod {
+    .get
+  }
+
   var expectedStatusCode: ClosedRange<Int> {
     200 ... 299
   }
 
   func request(completion: @escaping (Result<ResponseType, RequestError>) -> Void) -> URLSessionDataTask {
     let url = Configs.baseURL.appendingPathComponent(path)
+    var request = URLRequest(url: url)
+    request.httpMethod = method.rawValue
 
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
       if let error = error {
