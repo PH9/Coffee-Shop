@@ -5,7 +5,8 @@ public protocol Requestable {
   var path: String { get }
   var expectedStatusCode: ClosedRange<Int> { get }
   associatedtype ResponseType: Decodable
-  func request(completion: @escaping (Result<ResponseType, RequestError>) -> Void) -> Cancellable
+  func request(urlSession: URLSession, completion: @escaping (Result<ResponseType, RequestError>) -> Void)
+    -> Cancellable
 }
 
 public extension Requestable {
@@ -17,12 +18,15 @@ public extension Requestable {
     200 ... 299
   }
 
-  func request(completion: @escaping (Result<ResponseType, RequestError>) -> Void) -> Cancellable {
+  func request(
+    urlSession: URLSession = .shared,
+    completion: @escaping (Result<ResponseType, RequestError>) -> Void
+  ) -> Cancellable {
     let url = Configs.baseURL.appendingPathComponent(path)
     var request = URLRequest(url: url)
     request.httpMethod = method.rawValue
 
-    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+    let task = urlSession.dataTask(with: request) { data, response, error in
       if let error = error {
         completion(.failure(.dataTask(error)))
         return
