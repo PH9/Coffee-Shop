@@ -92,7 +92,7 @@
 			children = (
 				165BE4C7267C53D5005B4AFA /* CoffeeShopAPI.swift */,
 				165BE4E7267C58AE005B4AFA /* Model */,
-				165BE4EB267C5992005B4AFA /* StoreRequest.swift */,
+				165BE4EE267C5B5B005B4AFA /* Request */,
 			);
 			path = CoffeeShopAPI;
 			sourceTree = "<group>";
@@ -114,6 +114,14 @@
 				165BE4DF267C558C005B4AFA /* StoreInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		165BE4EE267C5B5B005B4AFA /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				165BE4EB267C5992005B4AFA /* StoreRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
