@@ -1,10 +1,12 @@
 import Foundation
 
 public struct ProductRequest: Requestable {
+  public let path = "/products"
+
   public init() {}
 
   public func request(completion: @escaping (Result<[Product], RequestError>) -> Void) -> URLSessionDataTask {
-    let url = Configs.baseURL.appendingPathComponent("/products")
+    let url = Configs.baseURL.appendingPathComponent(path)
 
     let task = URLSession.shared.dataTask(with: url) { data, _, error in
       if let error = error {

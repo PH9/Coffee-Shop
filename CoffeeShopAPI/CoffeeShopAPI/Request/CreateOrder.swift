@@ -1,6 +1,8 @@
 import Foundation
 
 public struct CreateOrder: Requestable {
+  public let path = "/order"
+
   let product: Product
   let address: String
 
@@ -10,7 +12,7 @@ public struct CreateOrder: Requestable {
   }
 
   public func request(completion: @escaping (Result<EmptyResponse, RequestError>) -> Void) -> URLSessionDataTask {
-    let url = Configs.baseURL.appendingPathComponent("/order")
+    let url = Configs.baseURL.appendingPathComponent(path)
     let request = URLRequest(url: url)
 
     let task = URLSession.shared.dataTask(with: request) { _, response, error in
