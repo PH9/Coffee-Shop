@@ -89,9 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				165BE4C7267C53D5005B4AFA /* CoffeeShopAPI.swift */,
-				165BE4E4267C5639005B4AFA /* Order.swift */,
-				165BE4E2267C55F2005B4AFA /* Product.swift */,
-				165BE4DF267C558C005B4AFA /* StoreInfo.swift */,
+				165BE4E7267C58AE005B4AFA /* Model */,
 			);
 			path = CoffeeShopAPI;
 			sourceTree = "<group>";
@@ -103,6 +101,16 @@
 				165BE4D6267C54A5005B4AFA /* Info.plist */,
 			);
 			path = CoffeeShopAPITests;
+			sourceTree = "<group>";
+		};
+		165BE4E7267C58AE005B4AFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				165BE4E4267C5639005B4AFA /* Order.swift */,
+				165BE4E2267C55F2005B4AFA /* Product.swift */,
+				165BE4DF267C558C005B4AFA /* StoreInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
