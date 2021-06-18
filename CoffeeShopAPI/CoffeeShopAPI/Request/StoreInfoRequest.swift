@@ -2,7 +2,7 @@ import Foundation
 
 public enum StoreInfoRequest {
   public static func request(completion: @escaping (Result<StoreInfo, RequestError>) -> Void) {
-    let url = URL(string: "https://virtserver.swaggerhub.com/m-tul/opn-mobile-challenge-api/1.0.0/storeInfo")!
+    let url = Configs.baseURL.appendingPathComponent("/storeInfo")
 
     let task = URLSession.shared.dataTask(with: url) { data, _, error in
       if let error = error {
