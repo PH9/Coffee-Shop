@@ -2,6 +2,8 @@ import Foundation
 
 public struct CreateOrder: Requestable {
   public let path = "/order"
+  public typealias ResponseType = EmptyResponse
+  public let expectedStatusCode: ClosedRange<Int> = 201 ... 201
 
   let product: Product
   let address: String
@@ -9,37 +11,5 @@ public struct CreateOrder: Requestable {
   public init(product: Product, address: String) {
     self.product = product
     self.address = address
-  }
-
-  public func request(completion: @escaping (Result<EmptyResponse, RequestError>) -> Void) -> URLSessionDataTask {
-    let url = Configs.baseURL.appendingPathComponent(path)
-    let request = URLRequest(url: url)
-
-    let task = URLSession.shared.dataTask(with: request) { _, response, error in
-      if let error = error {
-        completion(.failure(.dataTask(error)))
-        return
-      }
-
-      guard let response = response else {
-        completion(.failure(.noResponse))
-        return
-      }
-
-      guard let response = response as? HTTPURLResponse else {
-        completion(.failure(.responseIsNotHTTPURLResponse))
-        return
-      }
-
-      if response.statusCode != 201 {
-        completion(.failure(.unexpectedResponseCode(response.statusCode)))
-        return
-      }
-
-      completion(.success(EmptyResponse()))
-    }
-
-    task.resume()
-    return task
   }
 }
