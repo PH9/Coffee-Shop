@@ -114,6 +114,29 @@ class RequestableTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
+  func test_allCorrect_shouldReturnResponse() throws {
+    let response = HTTPURLResponse(url: sut.url, statusCode: 200, httpVersion: nil, headerFields: nil)
+    let myResponse = MyResponse(key: "value")
+    let myResponseData = try JSONEncoder().encode(myResponse)
+    URLProtocolMock.stub = [sut.url: (myResponseData, response, nil)]
+
+    let expectation = XCTestExpectation()
+    _ = sut.request(urlSession: makeMockSession()) { result in
+      defer {
+        expectation.fulfill()
+      }
+
+      guard case let .success(responseResponse) = result else {
+        XCTFail("There is no nothing, should get failure result")
+        return
+      }
+
+      XCTAssertEqual(responseResponse, myResponse)
+    }
+
+    wait(for: [expectation], timeout: 1)
+  }
+
   private func makeMockSession() -> URLSession {
     let sessionConfiguration = URLSessionConfiguration.ephemeral
     sessionConfiguration.protocolClasses = [URLProtocolMock.self]

@@ -1,3 +1,3 @@
-struct MyResponse: Decodable {
+struct MyResponse: Codable, Equatable {
   let key: String
 }
