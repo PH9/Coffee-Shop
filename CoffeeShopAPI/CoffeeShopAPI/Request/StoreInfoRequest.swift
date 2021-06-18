@@ -6,7 +6,7 @@ public enum StoreInfoRequest {
 
     let task = URLSession.shared.dataTask(with: url) { data, _, _ in
       guard let data = data else {
-        completion(.failure(RequestError.onData))
+        completion(.failure(.onData))
         return
       }
 
