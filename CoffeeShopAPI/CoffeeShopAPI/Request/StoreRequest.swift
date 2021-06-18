@@ -1,10 +1,5 @@
 import Foundation
 
-public enum RequestError: Error {
-  case onData
-  case parsing(Error)
-}
-
 public enum StoreInfoRequest {
   public static func request(completion: @escaping (Result<StoreInfo, RequestError>) -> Void) {
     let url = URL(string: "https://virtserver.swaggerhub.com/m-tul/opn-mobile-challenge-api/1.0.0/storeInfo")!

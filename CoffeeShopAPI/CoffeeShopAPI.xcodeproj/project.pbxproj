@@ -14,6 +14,7 @@
 		165BE4E3267C55F2005B4AFA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4E2267C55F2005B4AFA /* Product.swift */; };
 		165BE4E5267C5639005B4AFA /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4E4267C5639005B4AFA /* Order.swift */; };
 		165BE4EC267C5992005B4AFA /* StoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4EB267C5992005B4AFA /* StoreRequest.swift */; };
+		165BE4F0267C5B80005B4AFA /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4EF267C5B80005B4AFA /* RequestError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		165BE4E2267C55F2005B4AFA /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		165BE4E4267C5639005B4AFA /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		165BE4EB267C5992005B4AFA /* StoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRequest.swift; sourceTree = "<group>"; };
+		165BE4EF267C5B80005B4AFA /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		165BE4EE267C5B5B005B4AFA /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				165BE4EF267C5B80005B4AFA /* RequestError.swift */,
 				165BE4EB267C5992005B4AFA /* StoreRequest.swift */,
 			);
 			path = Request;
@@ -215,6 +218,7 @@
 			files = (
 				165BE4EC267C5992005B4AFA /* StoreRequest.swift in Sources */,
 				165BE4C8267C53D5005B4AFA /* CoffeeShopAPI.swift in Sources */,
+				165BE4F0267C5B80005B4AFA /* RequestError.swift in Sources */,
 				165BE4E0267C558C005B4AFA /* StoreInfo.swift in Sources */,
 				165BE4E5267C5639005B4AFA /* Order.swift in Sources */,
 				165BE4E3267C55F2005B4AFA /* Product.swift in Sources */,
