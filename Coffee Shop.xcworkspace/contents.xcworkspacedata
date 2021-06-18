@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CoffeeShopAPI/CoffeeShopAPI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Coffee Shop.xcodeproj">
    </FileRef>
 </Workspace>
