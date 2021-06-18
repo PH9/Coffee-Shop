@@ -1,0 +1,7 @@
+--header strip
+--indent 2
+
+--maxwidth 120
+
+--exclude DerivedData
+
