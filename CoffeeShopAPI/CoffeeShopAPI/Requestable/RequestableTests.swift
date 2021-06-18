@@ -14,18 +14,21 @@ class RequestableTests: XCTestCase {
 
     let expectation = XCTestExpectation()
     _ = sut.request(urlSession: makeMockSession()) { result in
-      switch result {
-      case let .failure(error):
-        switch error {
-        case .responseIsNotHTTPURLResponse:
-          break
-        default:
-          XCTFail("Should be noResponse error")
-        }
-      default:
-        XCTFail("There is no nothing, should get failure result")
+      defer {
+        expectation.fulfill()
       }
-      expectation.fulfill()
+
+      guard case let .failure(error) = result else {
+        XCTFail("There is no nothing, should get failure result")
+        return
+      }
+
+      switch error {
+      case .responseIsNotHTTPURLResponse:
+        break
+      default:
+        XCTFail("Should be responseIsNotHTTPURLResponse error")
+      }
     }
 
     wait(for: [expectation], timeout: 1)
