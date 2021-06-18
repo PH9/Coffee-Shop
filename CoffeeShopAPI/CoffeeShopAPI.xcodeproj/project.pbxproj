@@ -20,6 +20,7 @@
 		166F33B5267C68D7004DC6ED /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33B4267C68D7004DC6ED /* EmptyResponse.swift */; };
 		166F33B7267C691E004DC6ED /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33B6267C691E004DC6ED /* HTTPMethod.swift */; };
 		166F33B9267C6A5B004DC6ED /* RequestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33B8267C6A5B004DC6ED /* RequestableTests.swift */; };
+		166F33BC267C6CB3004DC6ED /* URLSessionDataTask+reqeust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33BB267C6CB3004DC6ED /* URLSessionDataTask+reqeust.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		166F33B4267C68D7004DC6ED /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		166F33B6267C691E004DC6ED /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		166F33B8267C6A5B004DC6ED /* RequestableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestableTests.swift; sourceTree = "<group>"; };
+		166F33BB267C6CB3004DC6ED /* URLSessionDataTask+reqeust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+reqeust.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				166F33B8267C6A5B004DC6ED /* RequestableTests.swift */,
 				165BE4EF267C5B80005B4AFA /* RequestError.swift */,
 				165BE4EB267C5992005B4AFA /* StoreInfoRequest.swift */,
+				166F33BB267C6CB3004DC6ED /* URLSessionDataTask+reqeust.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				165BE4F8267C5E36005B4AFA /* CreateOrder.swift in Sources */,
 				166F33B5267C68D7004DC6ED /* EmptyResponse.swift in Sources */,
 				165BE4FE267C612A005B4AFA /* Requestable.swift in Sources */,
+				166F33BC267C6CB3004DC6ED /* URLSessionDataTask+reqeust.swift in Sources */,
 				165BE4F4267C5C0D005B4AFA /* ProductRequest.swift in Sources */,
 				166F33B7267C691E004DC6ED /* HTTPMethod.swift in Sources */,
 				165BE4E5267C5639005B4AFA /* Order.swift in Sources */,
