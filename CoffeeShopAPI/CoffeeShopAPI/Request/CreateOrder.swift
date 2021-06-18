@@ -1,6 +1,6 @@
 import Foundation
 
-public struct CreateOrder {
+public struct CreateOrder: Requestable {
   let product: Product
   let address: String
 
@@ -9,7 +9,7 @@ public struct CreateOrder {
     self.address = address
   }
 
-  public func request(completion: @escaping (Result<Void, RequestError>) -> Void) {
+  public func request(completion: @escaping (Result<EmptyResponse, RequestError>) -> Void) {
     let url = Configs.baseURL.appendingPathComponent("/order")
     let request = URLRequest(url: url)
 
@@ -34,7 +34,7 @@ public struct CreateOrder {
         return
       }
 
-      completion(.success(()))
+      completion(.success(EmptyResponse()))
     }
 
     task.resume()

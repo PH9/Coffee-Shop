@@ -1,7 +1,9 @@
 import Foundation
 
-public enum ProductRequest {
-  public static func request(completion: @escaping (Result<[Product], RequestError>) -> Void) {
+public struct ProductRequest: Requestable {
+  public init() {}
+
+  public func request(completion: @escaping (Result<[Product], RequestError>) -> Void) {
     let url = Configs.baseURL.appendingPathComponent("/products")
 
     let task = URLSession.shared.dataTask(with: url) { data, _, error in

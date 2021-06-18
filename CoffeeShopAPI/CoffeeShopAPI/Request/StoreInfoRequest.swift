@@ -1,7 +1,9 @@
 import Foundation
 
-public enum StoreInfoRequest {
-  public static func request(completion: @escaping (Result<StoreInfo, RequestError>) -> Void) {
+public struct StoreInfoRequest: Requestable {
+  public init() {}
+
+  public func request(completion: @escaping (Result<StoreInfo, RequestError>) -> Void) {
     let url = Configs.baseURL.appendingPathComponent("/storeInfo")
 
     let task = URLSession.shared.dataTask(with: url) { data, _, error in
