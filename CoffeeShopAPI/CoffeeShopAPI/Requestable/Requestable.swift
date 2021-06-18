@@ -49,7 +49,7 @@ public extension Requestable {
         return
       }
 
-      if expectedStatusCode.contains(response.statusCode) {
+      guard expectedStatusCode.contains(response.statusCode) else {
         completion(.failure(.unexpectedResponseCode(response.statusCode)))
         return
       }

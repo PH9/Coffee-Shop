@@ -62,6 +62,32 @@ class RequestableTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
+  func test_requestWithUnExpectedStatusCode_shouldGetError() {
+    let response = HTTPURLResponse(url: sut.url, statusCode: 400, httpVersion: nil, headerFields: nil)
+    URLProtocolMock.stub = [sut.url: (nil, response, nil)]
+
+    let expectation = XCTestExpectation()
+    _ = sut.request(urlSession: makeMockSession()) { result in
+      defer {
+        expectation.fulfill()
+      }
+
+      guard case let .failure(responseError) = result else {
+        XCTFail("There is no nothing, should get failure result")
+        return
+      }
+
+      switch responseError {
+      case let .unexpectedResponseCode(statusCode):
+        XCTAssertEqual(statusCode, 400)
+      default:
+        XCTFail("Should be onData, but got \(responseError)")
+      }
+    }
+
+    wait(for: [expectation], timeout: 1)
+  }
+
   private func makeMockSession() -> URLSession {
     let sessionConfiguration = URLSessionConfiguration.ephemeral
     sessionConfiguration.protocolClasses = [URLProtocolMock.self]
