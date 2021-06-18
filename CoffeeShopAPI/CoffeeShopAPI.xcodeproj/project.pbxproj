@@ -8,7 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		165BE4C8267C53D5005B4AFA /* CoffeeShopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4C7267C53D5005B4AFA /* CoffeeShopAPI.swift */; };
+		165BE4D5267C54A5005B4AFA /* CoffeeShopAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4D4267C54A5005B4AFA /* CoffeeShopAPITests.swift */; };
+		165BE4D7267C54A5005B4AFA /* libCoffeeShopAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 165BE4C4267C53D5005B4AFA /* libCoffeeShopAPI.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		165BE4D8267C54A5005B4AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 165BE4BC267C53D5005B4AFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 165BE4C3267C53D5005B4AFA;
+			remoteInfo = CoffeeShopAPI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		165BE4C2267C53D5005B4AFA /* CopyFiles */ = {
@@ -25,6 +37,9 @@
 /* Begin PBXFileReference section */
 		165BE4C4267C53D5005B4AFA /* libCoffeeShopAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoffeeShopAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		165BE4C7267C53D5005B4AFA /* CoffeeShopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopAPI.swift; sourceTree = "<group>"; };
+		165BE4D2267C54A5005B4AFA /* CoffeeShopAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		165BE4D4267C54A5005B4AFA /* CoffeeShopAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopAPITests.swift; sourceTree = "<group>"; };
+		165BE4D6267C54A5005B4AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +50,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		165BE4CF267C54A5005B4AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				165BE4D7267C54A5005B4AFA /* libCoffeeShopAPI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				165BE4C6267C53D5005B4AFA /* CoffeeShopAPI */,
+				165BE4D3267C54A5005B4AFA /* CoffeeShopAPITests */,
 				165BE4C5267C53D5005B4AFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				165BE4C4267C53D5005B4AFA /* libCoffeeShopAPI.a */,
+				165BE4D2267C54A5005B4AFA /* CoffeeShopAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +85,15 @@
 				165BE4C7267C53D5005B4AFA /* CoffeeShopAPI.swift */,
 			);
 			path = CoffeeShopAPI;
+			sourceTree = "<group>";
+		};
+		165BE4D3267C54A5005B4AFA /* CoffeeShopAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				165BE4D4267C54A5005B4AFA /* CoffeeShopAPITests.swift */,
+				165BE4D6267C54A5005B4AFA /* Info.plist */,
+			);
+			path = CoffeeShopAPITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +116,24 @@
 			productReference = 165BE4C4267C53D5005B4AFA /* libCoffeeShopAPI.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		165BE4D1267C54A5005B4AFA /* CoffeeShopAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 165BE4DA267C54A5005B4AFA /* Build configuration list for PBXNativeTarget "CoffeeShopAPITests" */;
+			buildPhases = (
+				165BE4CE267C54A5005B4AFA /* Sources */,
+				165BE4CF267C54A5005B4AFA /* Frameworks */,
+				165BE4D0267C54A5005B4AFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				165BE4D9267C54A5005B4AFA /* PBXTargetDependency */,
+			);
+			name = CoffeeShopAPITests;
+			productName = CoffeeShopAPITests;
+			productReference = 165BE4D2267C54A5005B4AFA /* CoffeeShopAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +144,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					165BE4C3267C53D5005B4AFA = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					165BE4D1267C54A5005B4AFA = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -110,9 +165,20 @@
 			projectRoot = "";
 			targets = (
 				165BE4C3267C53D5005B4AFA /* CoffeeShopAPI */,
+				165BE4D1267C54A5005B4AFA /* CoffeeShopAPITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		165BE4D0267C54A5005B4AFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		165BE4C0267C53D5005B4AFA /* Sources */ = {
@@ -123,7 +189,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		165BE4CE267C54A5005B4AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				165BE4D5267C54A5005B4AFA /* CoffeeShopAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		165BE4D9267C54A5005B4AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 165BE4C3267C53D5005B4AFA /* CoffeeShopAPI */;
+			targetProxy = 165BE4D8267C54A5005B4AFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		165BE4C9267C53D5005B4AFA /* Debug */ = {
@@ -266,6 +348,40 @@
 			};
 			name = Release;
 		};
+		165BE4DB267C54A5005B4AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoffeeShopAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.ph9.CoffeeShopAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		165BE4DC267C54A5005B4AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoffeeShopAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.ph9.CoffeeShopAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -283,6 +399,15 @@
 			buildConfigurations = (
 				165BE4CC267C53D5005B4AFA /* Debug */,
 				165BE4CD267C53D5005B4AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		165BE4DA267C54A5005B4AFA /* Build configuration list for PBXNativeTarget "CoffeeShopAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				165BE4DB267C54A5005B4AFA /* Debug */,
+				165BE4DC267C54A5005B4AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
