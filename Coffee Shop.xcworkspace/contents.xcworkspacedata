@@ -5,6 +5,6 @@
       location = "group:CoffeeShopAPI/CoffeeShopAPI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Coffee Shop.xcodeproj">
+      location = "group:/Users/w/Coffee Shop/Coffee Shop App.xcodeproj">
    </FileRef>
 </Workspace>

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "164EC912267C471F00451540"
-               BuildableName = "Coffee Shop.app"
-               BlueprintName = "Coffee Shop"
-               ReferencedContainer = "container:Coffee Shop.xcodeproj">
+               BuildableName = "Coffee Shop App.app"
+               BlueprintName = "Coffee Shop App"
+               ReferencedContainer = "container:Coffee Shop App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "164EC912267C471F00451540"
-            BuildableName = "Coffee Shop.app"
-            BlueprintName = "Coffee Shop"
-            ReferencedContainer = "container:Coffee Shop.xcodeproj">
+            BuildableName = "Coffee Shop App.app"
+            BlueprintName = "Coffee Shop App"
+            ReferencedContainer = "container:Coffee Shop App.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -46,9 +46,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "164EC928267C472000451540"
-               BuildableName = "Coffee ShopTests.xctest"
-               BlueprintName = "Coffee ShopTests"
-               ReferencedContainer = "container:Coffee Shop.xcodeproj">
+               BuildableName = "Coffee Shop AppTests.xctest"
+               BlueprintName = "Coffee Shop AppTests"
+               ReferencedContainer = "container:Coffee Shop App.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -56,9 +56,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "164EC933267C472000451540"
-               BuildableName = "Coffee ShopUITests.xctest"
-               BlueprintName = "Coffee ShopUITests"
-               ReferencedContainer = "container:Coffee Shop.xcodeproj">
+               BuildableName = "Coffee Shop AppUITests.xctest"
+               BlueprintName = "Coffee Shop AppUITests"
+               ReferencedContainer = "container:Coffee Shop App.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "164EC912267C471F00451540"
-            BuildableName = "Coffee Shop.app"
-            BlueprintName = "Coffee Shop"
-            ReferencedContainer = "container:Coffee Shop.xcodeproj">
+            BuildableName = "Coffee Shop App.app"
+            BlueprintName = "Coffee Shop App"
+            ReferencedContainer = "container:Coffee Shop App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "164EC912267C471F00451540"
-            BuildableName = "Coffee Shop.app"
-            BlueprintName = "Coffee Shop"
-            ReferencedContainer = "container:Coffee Shop.xcodeproj">
+            BuildableName = "Coffee Shop App.app"
+            BlueprintName = "Coffee Shop App"
+            ReferencedContainer = "container:Coffee Shop App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
