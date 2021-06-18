@@ -10,7 +10,7 @@ public struct CreateOrder {
   }
 
   public func request(completion: @escaping (Result<Void, RequestError>) -> Void) {
-    let url = URL(string: "https://virtserver.swaggerhub.com/m-tul/opn-mobile-challenge-api/1.0.0/order")!
+    let url = Configs.baseURL.appendingPathComponent("/order")
     let request = URLRequest(url: url)
 
     let task = URLSession.shared.dataTask(with: request) { _, response, error in
