@@ -99,13 +99,13 @@
 		164EC915267C471F00451540 /* Coffee Shop App */ = {
 			isa = PBXGroup;
 			children = (
+				164EC924267C472000451540 /* Info.plist */,
 				164EC916267C471F00451540 /* AppDelegate.swift */,
 				164EC918267C471F00451540 /* SceneDelegate.swift */,
 				164EC91A267C471F00451540 /* ViewController.swift */,
-				164EC91C267C471F00451540 /* Main.storyboard */,
 				164EC91F267C472000451540 /* Assets.xcassets */,
 				164EC921267C472000451540 /* LaunchScreen.storyboard */,
-				164EC924267C472000451540 /* Info.plist */,
+				164EC91C267C471F00451540 /* Main.storyboard */,
 			);
 			path = "Coffee Shop App";
 			sourceTree = "<group>";
