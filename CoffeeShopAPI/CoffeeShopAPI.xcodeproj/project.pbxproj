@@ -23,6 +23,7 @@
 		166F33BF267C6D7D004DC6ED /* RequestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33B8267C6A5B004DC6ED /* RequestableTests.swift */; };
 		166F33C5267C7100004DC6ED /* MyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33C4267C7100004DC6ED /* MyResponse.swift */; };
 		166F33C6267C7123004DC6ED /* MyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33C2267C707D004DC6ED /* MyRequest.swift */; };
+		166F33C8267C7313004DC6ED /* URLProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33C7267C7313004DC6ED /* URLProtocolSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		166F33BB267C6CB3004DC6ED /* URLSessionDataTask+reqeust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+reqeust.swift"; sourceTree = "<group>"; };
 		166F33C2267C707D004DC6ED /* MyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequest.swift; sourceTree = "<group>"; };
 		166F33C4267C7100004DC6ED /* MyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResponse.swift; sourceTree = "<group>"; };
+		166F33C7267C7313004DC6ED /* URLProtocolSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				166F33B8267C6A5B004DC6ED /* RequestableTests.swift */,
 				165BE4EF267C5B80005B4AFA /* RequestError.swift */,
 				166F33BB267C6CB3004DC6ED /* URLSessionDataTask+reqeust.swift */,
+				166F33C7267C7313004DC6ED /* URLProtocolSpy.swift */,
 			);
 			path = Requestable;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166F33C8267C7313004DC6ED /* URLProtocolSpy.swift in Sources */,
 				166F33C5267C7100004DC6ED /* MyResponse.swift in Sources */,
 				166F33BF267C6D7D004DC6ED /* RequestableTests.swift in Sources */,
 				166F33C6267C7123004DC6ED /* MyRequest.swift in Sources */,

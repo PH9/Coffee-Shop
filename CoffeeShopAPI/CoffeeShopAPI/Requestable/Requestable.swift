@@ -2,6 +2,7 @@ import Foundation
 
 public protocol Requestable {
   var method: HTTPMethod { get }
+  var url: URL { get }
   var path: String { get }
   var expectedStatusCode: ClosedRange<Int> { get }
   associatedtype ResponseType: Decodable
@@ -14,6 +15,10 @@ public extension Requestable {
     .get
   }
 
+  var url: URL {
+    Configs.baseURL.appendingPathComponent(path)
+  }
+
   var expectedStatusCode: ClosedRange<Int> {
     200 ... 299
   }
@@ -22,7 +27,6 @@ public extension Requestable {
     urlSession: URLSession = .shared,
     completion: @escaping (Result<ResponseType, RequestError>) -> Void
   ) -> Cancellable {
-    let url = Configs.baseURL.appendingPathComponent(path)
     var request = URLRequest(url: url)
     request.httpMethod = method.rawValue
 

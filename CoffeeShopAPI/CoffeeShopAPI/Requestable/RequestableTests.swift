@@ -8,4 +8,27 @@ class RequestableTests: XCTestCase {
     XCTAssertEqual(sut.method, .get)
     XCTAssertEqual(sut.expectedStatusCode, 200 ... 299)
   }
+
+  func test_request_withNothingResponse() {
+    URLProtocolMock.stub = [sut.url: (nil, nil, nil)]
+
+    let expectation = XCTestExpectation()
+    _ = sut.request(urlSession: makeMockSession()) { result in
+      switch result {
+      case .failure:
+        break
+      default:
+        XCTFail("There is no nothing, should get failure result")
+      }
+      expectation.fulfill()
+    }
+
+    wait(for: [expectation], timeout: 1)
+  }
+
+  private func makeMockSession() -> URLSession {
+    let sessionConfiguration = URLSessionConfiguration.ephemeral
+    sessionConfiguration.protocolClasses = [URLProtocolMock.self]
+    return URLSession(configuration: sessionConfiguration)
+  }
 }
