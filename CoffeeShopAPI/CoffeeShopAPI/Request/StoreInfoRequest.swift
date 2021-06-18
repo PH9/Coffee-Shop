@@ -3,7 +3,7 @@ import Foundation
 public struct StoreInfoRequest: Requestable {
   public init() {}
 
-  public func request(completion: @escaping (Result<StoreInfo, RequestError>) -> Void) {
+  public func request(completion: @escaping (Result<StoreInfo, RequestError>) -> Void) -> URLSessionDataTask {
     let url = Configs.baseURL.appendingPathComponent("/storeInfo")
 
     let task = URLSession.shared.dataTask(with: url) { data, _, error in
@@ -26,5 +26,6 @@ public struct StoreInfoRequest: Requestable {
     }
 
     task.resume()
+    return task
   }
 }

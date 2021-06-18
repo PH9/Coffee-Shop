@@ -9,7 +9,7 @@ public struct CreateOrder: Requestable {
     self.address = address
   }
 
-  public func request(completion: @escaping (Result<EmptyResponse, RequestError>) -> Void) {
+  public func request(completion: @escaping (Result<EmptyResponse, RequestError>) -> Void) -> URLSessionDataTask {
     let url = Configs.baseURL.appendingPathComponent("/order")
     let request = URLRequest(url: url)
 
@@ -38,5 +38,6 @@ public struct CreateOrder: Requestable {
     }
 
     task.resume()
+    return task
   }
 }
