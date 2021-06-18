@@ -1,7 +1,5 @@
 import Foundation
 
-public struct EmptyResponse: Decodable {}
-
 public protocol Requestable {
   var path: String { get }
   var expectedStatusCode: ClosedRange<Int> { get }

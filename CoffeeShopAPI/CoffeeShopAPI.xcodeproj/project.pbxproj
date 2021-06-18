@@ -19,6 +19,7 @@
 		165BE4F8267C5E36005B4AFA /* CreateOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4F7267C5E36005B4AFA /* CreateOrder.swift */; };
 		165BE4FC267C6002005B4AFA /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4FB267C6002005B4AFA /* Configs.swift */; };
 		165BE4FE267C612A005B4AFA /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4FD267C612A005B4AFA /* Requestable.swift */; };
+		166F33B5267C68D7004DC6ED /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F33B4267C68D7004DC6ED /* EmptyResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		165BE4F7267C5E36005B4AFA /* CreateOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrder.swift; sourceTree = "<group>"; };
 		165BE4FB267C6002005B4AFA /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		165BE4FD267C612A005B4AFA /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		166F33B4267C68D7004DC6ED /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				165BE4E4267C5639005B4AFA /* Order.swift */,
 				165BE4E2267C55F2005B4AFA /* Product.swift */,
 				165BE4DF267C558C005B4AFA /* StoreInfo.swift */,
+				166F33B4267C68D7004DC6ED /* EmptyResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				165BE4F0267C5B80005B4AFA /* RequestError.swift in Sources */,
 				165BE4E0267C558C005B4AFA /* StoreInfo.swift in Sources */,
 				165BE4F8267C5E36005B4AFA /* CreateOrder.swift in Sources */,
+				166F33B5267C68D7004DC6ED /* EmptyResponse.swift in Sources */,
 				165BE4FE267C612A005B4AFA /* Requestable.swift in Sources */,
 				165BE4F4267C5C0D005B4AFA /* ProductRequest.swift in Sources */,
 				165BE4E5267C5639005B4AFA /* Order.swift in Sources */,
