@@ -88,6 +88,32 @@ class RequestableTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
+  func test_requestWithNotParsableData_shouldGotError() {
+    let response = HTTPURLResponse(url: sut.url, statusCode: 200, httpVersion: nil, headerFields: nil)
+    URLProtocolMock.stub = [sut.url: (nil, response, nil)]
+
+    let expectation = XCTestExpectation()
+    _ = sut.request(urlSession: makeMockSession()) { result in
+      defer {
+        expectation.fulfill()
+      }
+
+      guard case let .failure(responseError) = result else {
+        XCTFail("There is no nothing, should get failure result")
+        return
+      }
+
+      switch responseError {
+      case let .parsing(error):
+        XCTAssertEqual(error.localizedDescription, "The data couldn’t be read because it isn’t in the correct format.")
+      default:
+        XCTFail("Should be onData, but got \(responseError)")
+      }
+    }
+
+    wait(for: [expectation], timeout: 1)
+  }
+
   private func makeMockSession() -> URLSession {
     let sessionConfiguration = URLSessionConfiguration.ephemeral
     sessionConfiguration.protocolClasses = [URLProtocolMock.self]
