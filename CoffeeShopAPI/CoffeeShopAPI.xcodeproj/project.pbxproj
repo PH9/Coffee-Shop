@@ -11,6 +11,7 @@
 		165BE4D5267C54A5005B4AFA /* CoffeeShopAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4D4267C54A5005B4AFA /* CoffeeShopAPITests.swift */; };
 		165BE4D7267C54A5005B4AFA /* libCoffeeShopAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 165BE4C4267C53D5005B4AFA /* libCoffeeShopAPI.a */; };
 		165BE4E0267C558C005B4AFA /* StoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4DF267C558C005B4AFA /* StoreInfo.swift */; };
+		165BE4E3267C55F2005B4AFA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165BE4E2267C55F2005B4AFA /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		165BE4D4267C54A5005B4AFA /* CoffeeShopAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopAPITests.swift; sourceTree = "<group>"; };
 		165BE4D6267C54A5005B4AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		165BE4DF267C558C005B4AFA /* StoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfo.swift; sourceTree = "<group>"; };
+		165BE4E2267C55F2005B4AFA /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				165BE4C7267C53D5005B4AFA /* CoffeeShopAPI.swift */,
+				165BE4E2267C55F2005B4AFA /* Product.swift */,
 				165BE4DF267C558C005B4AFA /* StoreInfo.swift */,
 			);
 			path = CoffeeShopAPI;
@@ -190,6 +193,7 @@
 			files = (
 				165BE4C8267C53D5005B4AFA /* CoffeeShopAPI.swift in Sources */,
 				165BE4E0267C558C005B4AFA /* StoreInfo.swift in Sources */,
+				165BE4E3267C55F2005B4AFA /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
