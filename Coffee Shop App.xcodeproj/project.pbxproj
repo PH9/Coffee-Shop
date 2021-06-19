@@ -15,6 +15,8 @@
 		164EC923267C472000451540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164EC921267C472000451540 /* LaunchScreen.storyboard */; };
 		164EC92E267C472000451540 /* Coffee_ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC92D267C472000451540 /* Coffee_ShopTests.swift */; };
 		164EC939267C472000451540 /* Coffee_ShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC938267C472000451540 /* Coffee_ShopUITests.swift */; };
+		16B8C171267DCAD10002B2BF /* CoffeeShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C170267DCAD10002B2BF /* CoffeeShop.framework */; };
+		16B8C172267DCAD10002B2BF /* CoffeeShop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C170267DCAD10002B2BF /* CoffeeShop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		16B8C173267DCAD20002B2BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				16B8C172267DCAD10002B2BF /* CoffeeShop.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		164EC913267C471F00451540 /* Coffee Shop App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Shop App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		164EC916267C471F00451540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		164EC934267C472000451540 /* Coffee Shop AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee Shop AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		164EC938267C472000451540 /* Coffee_ShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_ShopUITests.swift; sourceTree = "<group>"; };
 		164EC93A267C472000451540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B8C170267DCAD10002B2BF /* CoffeeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoffeeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B8C171267DCAD10002B2BF /* CoffeeShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 				164EC92C267C472000451540 /* Coffee Shop AppTests */,
 				164EC937267C472000451540 /* Coffee Shop AppUITests */,
 				164EC914267C471F00451540 /* Products */,
+				16B8C16F267DCAD10002B2BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +147,14 @@
 			path = "Coffee Shop AppUITests";
 			sourceTree = "<group>";
 		};
+		16B8C16F267DCAD10002B2BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16B8C170267DCAD10002B2BF /* CoffeeShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +165,7 @@
 				164EC90F267C471F00451540 /* Sources */,
 				164EC910267C471F00451540 /* Frameworks */,
 				164EC911267C471F00451540 /* Resources */,
+				16B8C173267DCAD20002B2BF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
