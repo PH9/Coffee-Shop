@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		164C2B2F267DE4B700396EE5 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B2E267DE4B700396EE5 /* ImageProvider.swift */; };
 		164C2B31267DE4F600396EE5 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B30267DE4F600396EE5 /* Provider.swift */; };
+		164C2B39267DEE6600396EE5 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B38267DEE6600396EE5 /* TestCase.swift */; };
 		164EC917267C471F00451540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC916267C471F00451540 /* AppDelegate.swift */; };
 		164EC919267C471F00451540 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC918267C471F00451540 /* SceneDelegate.swift */; };
 		164EC91B267C471F00451540 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC91A267C471F00451540 /* ViewController.swift */; };
 		164EC91E267C471F00451540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164EC91C267C471F00451540 /* Main.storyboard */; };
 		164EC920267C472000451540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 164EC91F267C472000451540 /* Assets.xcassets */; };
 		164EC923267C472000451540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164EC921267C472000451540 /* LaunchScreen.storyboard */; };
-		164EC92E267C472000451540 /* Coffee_ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC92D267C472000451540 /* Coffee_ShopTests.swift */; };
 		164EC939267C472000451540 /* Coffee_ShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC938267C472000451540 /* Coffee_ShopUITests.swift */; };
 		16997F6A267DD4EA006AEDD2 /* Starter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F69267DD4EA006AEDD2 /* Starter.swift */; };
 		16997F6F267DDA47006AEDD2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 16997F6E267DDA47006AEDD2 /* Kingfisher */; };
@@ -57,6 +57,7 @@
 /* Begin PBXFileReference section */
 		164C2B2E267DE4B700396EE5 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		164C2B30267DE4F600396EE5 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		164C2B38267DEE6600396EE5 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		164EC913267C471F00451540 /* Coffee Shop App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Shop App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		164EC916267C471F00451540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		164EC918267C471F00451540 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		164EC922267C472000451540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		164EC924267C472000451540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		164EC929267C472000451540 /* Coffee Shop AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee Shop AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		164EC92D267C472000451540 /* Coffee_ShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_ShopTests.swift; sourceTree = "<group>"; };
 		164EC92F267C472000451540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		164EC934267C472000451540 /* Coffee Shop AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee Shop AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		164EC938267C472000451540 /* Coffee_ShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_ShopUITests.swift; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 		164EC92C267C472000451540 /* Coffee Shop AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				164EC92D267C472000451540 /* Coffee_ShopTests.swift */,
 				164EC92F267C472000451540 /* Info.plist */,
+				164C2B38267DEE6600396EE5 /* TestCase.swift */,
 			);
 			path = "Coffee Shop AppTests";
 			sourceTree = "<group>";
@@ -248,6 +248,7 @@
 					};
 					164EC928267C472000451540 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = 164EC912267C471F00451540;
 					};
 					164EC933267C472000451540 = {
@@ -324,7 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				164EC92E267C472000451540 /* Coffee_ShopTests.swift in Sources */,
+				164C2B39267DEE6600396EE5 /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +529,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Coffee Shop AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -537,6 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ph9.Coffee-ShopTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coffee Shop App.app/Coffee Shop App";
@@ -548,6 +551,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Coffee Shop AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

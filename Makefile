@@ -1,7 +1,8 @@
 XCODEBUILD := xcodebuild
-BUILD_FLAGS = -scheme $(SCHEME) -destination $(DESTINATION)
+BUILD_FLAGS = -scheme $(SCHEME) -destination $(DESTINATION) -workspace $(WORKSPACE) -derivedDataPath DerivedData
 
-SCHEME ?= 'Coffee Shop'
+WORKSPACE ?= 'Coffee Shop.xcworkspace'
+SCHEME ?= 'Coffee Shop App'
 PLATFORM ?= iOS
 IOS_VERSION ?= latest
 IPHONE_NAME ?= iPhone 8
@@ -25,5 +26,13 @@ setup-pre-commit:
 
 setup: install-brew setup-pre-commit
 
+carthage-bootstrap:
+	carthage bootstrap --platform iOS --use-xcframeworks --cache-builds
+
 test:
 	$(XCODEBUILD) test $(BUILD_FLAGS) $(XCPRETTY)
+
+test-all: carthage-bootstrap
+	"$(MAKE)" test
+	TARGET=CofeeShopeAPI "$(MAKE)" test
+	TARGET=CofeeShope "$(MAKE)" test
