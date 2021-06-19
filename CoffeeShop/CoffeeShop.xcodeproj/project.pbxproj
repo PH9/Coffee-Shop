@@ -12,6 +12,8 @@
 		16B8C14F267DBE6D0002B2BF /* CoffeeShop.h in Headers */ = {isa = PBXBuildFile; fileRef = 16B8C141267DBE6D0002B2BF /* CoffeeShop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16B8C159267DBF0A0002B2BF /* StoreInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */; };
 		16B8C15B267DBF1A0002B2BF /* StoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */; };
+		16B8C15D267DC2B90002B2BF /* StoreInfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C15C267DC2B90002B2BF /* StoreInfoViewControllerTests.swift */; };
+		16B8C15F267DC35D0002B2BF /* Bundle+this.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C15E267DC35D0002B2BF /* Bundle+this.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		16B8C14E267DBE6D0002B2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreInfo.storyboard; sourceTree = "<group>"; };
 		16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoViewController.swift; sourceTree = "<group>"; };
+		16B8C15C267DC2B90002B2BF /* StoreInfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoViewControllerTests.swift; sourceTree = "<group>"; };
+		16B8C15E267DC35D0002B2BF /* Bundle+this.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+this.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				16B8C142267DBE6D0002B2BF /* Info.plist */,
 				16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */,
 				16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */,
+				16B8C15C267DC2B90002B2BF /* StoreInfoViewControllerTests.swift */,
+				16B8C15E267DC35D0002B2BF /* Bundle+this.swift */,
 			);
 			path = CoffeeShop;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16B8C15B267DBF1A0002B2BF /* StoreInfoViewController.swift in Sources */,
+				16B8C15F267DC35D0002B2BF /* Bundle+this.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B8C15D267DC2B90002B2BF /* StoreInfoViewControllerTests.swift in Sources */,
 				16B8C14D267DBE6D0002B2BF /* CoffeeShopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
