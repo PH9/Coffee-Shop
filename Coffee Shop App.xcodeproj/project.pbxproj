@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		164C2B2F267DE4B700396EE5 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B2E267DE4B700396EE5 /* ImageProvider.swift */; };
+		164C2B31267DE4F600396EE5 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B30267DE4F600396EE5 /* Provider.swift */; };
 		164EC917267C471F00451540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC916267C471F00451540 /* AppDelegate.swift */; };
 		164EC919267C471F00451540 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC918267C471F00451540 /* SceneDelegate.swift */; };
 		164EC91B267C471F00451540 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC91A267C471F00451540 /* ViewController.swift */; };
@@ -16,6 +18,7 @@
 		164EC92E267C472000451540 /* Coffee_ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC92D267C472000451540 /* Coffee_ShopTests.swift */; };
 		164EC939267C472000451540 /* Coffee_ShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC938267C472000451540 /* Coffee_ShopUITests.swift */; };
 		16997F6A267DD4EA006AEDD2 /* Starter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F69267DD4EA006AEDD2 /* Starter.swift */; };
+		16997F6F267DDA47006AEDD2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 16997F6E267DDA47006AEDD2 /* Kingfisher */; };
 		16B8C171267DCAD10002B2BF /* CoffeeShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C170267DCAD10002B2BF /* CoffeeShop.framework */; };
 		16B8C172267DCAD10002B2BF /* CoffeeShop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C170267DCAD10002B2BF /* CoffeeShop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -52,6 +55,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		164C2B2E267DE4B700396EE5 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		164C2B30267DE4F600396EE5 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		164EC913267C471F00451540 /* Coffee Shop App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Shop App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		164EC916267C471F00451540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		164EC918267C471F00451540 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16997F6F267DDA47006AEDD2 /* Kingfisher in Frameworks */,
 				16B8C171267DCAD10002B2BF /* CoffeeShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		164C2B2D267DE4A800396EE5 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				164C2B2E267DE4B700396EE5 /* ImageProvider.swift */,
+				164C2B30267DE4F600396EE5 /* Provider.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		164EC90A267C471F00451540 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +135,7 @@
 		164EC915267C471F00451540 /* Coffee Shop App */ = {
 			isa = PBXGroup;
 			children = (
+				164C2B2D267DE4A800396EE5 /* Configurator */,
 				164EC916267C471F00451540 /* AppDelegate.swift */,
 				164EC91F267C472000451540 /* Assets.xcassets */,
 				164EC924267C472000451540 /* Info.plist */,
@@ -175,6 +191,9 @@
 			dependencies = (
 			);
 			name = "Coffee Shop App";
+			packageProductDependencies = (
+				16997F6E267DDA47006AEDD2 /* Kingfisher */,
+			);
 			productName = "Coffee Shop";
 			productReference = 164EC913267C471F00451540 /* Coffee Shop App.app */;
 			productType = "com.apple.product-type.application";
@@ -246,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 164EC90A267C471F00451540;
+			packageReferences = (
+				16997F6D267DDA47006AEDD2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 164EC914267C471F00451540 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				164C2B2F267DE4B700396EE5 /* ImageProvider.swift in Sources */,
 				164EC91B267C471F00451540 /* ViewController.swift in Sources */,
 				16997F6A267DD4EA006AEDD2 /* Starter.swift in Sources */,
 				164EC917267C471F00451540 /* AppDelegate.swift in Sources */,
+				164C2B31267DE4F600396EE5 /* Provider.swift in Sources */,
 				164EC919267C471F00451540 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16997F6D267DDA47006AEDD2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16997F6E267DDA47006AEDD2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16997F6D267DDA47006AEDD2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 164EC90B267C471F00451540 /* Project object */;
 }

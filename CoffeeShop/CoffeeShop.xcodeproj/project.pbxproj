@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16997F68267DD160006AEDD2 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F67267DD160006AEDD2 /* ProductListInteractor.swift */; };
+		16997F71267DDA65006AEDD2 /* SetImagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F70267DDA65006AEDD2 /* SetImagable.swift */; };
 		16B8C148267DBE6D0002B2BF /* CoffeeShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */; };
 		16B8C14D267DBE6D0002B2BF /* CoffeeShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C14C267DBE6D0002B2BF /* CoffeeShopTests.swift */; };
 		16B8C14F267DBE6D0002B2BF /* CoffeeShop.h in Headers */ = {isa = PBXBuildFile; fileRef = 16B8C141267DBE6D0002B2BF /* CoffeeShop.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		16997F67267DD160006AEDD2 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
+		16997F70267DDA65006AEDD2 /* SetImagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImagable.swift; sourceTree = "<group>"; };
 		16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoffeeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B8C141267DBE6D0002B2BF /* CoffeeShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeShop.h; sourceTree = "<group>"; };
 		16B8C142267DBE6D0002B2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				16B8C141267DBE6D0002B2BF /* CoffeeShop.h */,
 				16B8C142267DBE6D0002B2BF /* Info.plist */,
 				16B8C15E267DC35D0002B2BF /* Bundle+this.swift */,
+				16997F70267DDA65006AEDD2 /* SetImagable.swift */,
 				16B8C168267DC9960002B2BF /* Order */,
 				16B8C164267DC4D10002B2BF /* ProductList */,
 				16B8C165267DC4DB0002B2BF /* StoreInfo */,
@@ -269,6 +272,7 @@
 			files = (
 				16B8C15B267DBF1A0002B2BF /* StoreInfoViewController.swift in Sources */,
 				16997F68267DD160006AEDD2 /* ProductListInteractor.swift in Sources */,
+				16997F71267DDA65006AEDD2 /* SetImagable.swift in Sources */,
 				16B8C16C267DC9CD0002B2BF /* OrderViewController.swift in Sources */,
 				16B8C167267DC5140002B2BF /* ProductCell.swift in Sources */,
 				16B8C163267DC48D0002B2BF /* ProductListViewController.swift in Sources */,
