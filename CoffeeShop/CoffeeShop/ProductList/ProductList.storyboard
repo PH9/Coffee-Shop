@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProductCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Nb4-qH-J5Y" customClass="ProductCell" customModule="CoffeeShop" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="Nb4-qH-J5Y" customClass="ProductCell" customModule="CoffeeShop" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="153.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nb4-qH-J5Y" id="4o9-gG-Vd9">
