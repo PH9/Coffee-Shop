@@ -1,9 +1,9 @@
 import Foundation
 
 public struct Product: Codable {
-  let name: String
-  let price: Int
-  let imageURL: URL
+  public let name: String
+  public let price: Int
+  public let imageURL: URL
 
   private enum CodingKeys: String, CodingKey {
     case name

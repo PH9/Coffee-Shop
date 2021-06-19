@@ -25,6 +25,8 @@ final class ProductListViewController: UITableViewController {
       fatalError("Could not dequeue cell")
     }
 
+    cell.configureWith(products[indexPath.row])
+
     return cell
   }
 }
