@@ -1,4 +1,6 @@
 ## Build artifacts
+Carthage/Build/
+Carthage/Checkouts/
 DerivedData/
 
 ## User's settings

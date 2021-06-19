@@ -3,15 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		164C2B33267DE5DC00396EE5 /* ProductListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B32267DE5DC00396EE5 /* ProductListViewControllerTests.swift */; };
+		164C2B35267DE85500396EE5 /* FBSnapshotTestCase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164C2B34267DE85500396EE5 /* FBSnapshotTestCase.xcframework */; };
+		164C2B37267DEACF00396EE5 /* Object+placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B36267DEACF00396EE5 /* Object+placeholder.swift */; };
 		16997F68267DD160006AEDD2 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F67267DD160006AEDD2 /* ProductListInteractor.swift */; };
 		16997F71267DDA65006AEDD2 /* SetImagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F70267DDA65006AEDD2 /* SetImagable.swift */; };
 		16B8C148267DBE6D0002B2BF /* CoffeeShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */; };
-		16B8C14D267DBE6D0002B2BF /* CoffeeShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C14C267DBE6D0002B2BF /* CoffeeShopTests.swift */; };
+		16B8C14D267DBE6D0002B2BF /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C14C267DBE6D0002B2BF /* TestCase.swift */; };
 		16B8C14F267DBE6D0002B2BF /* CoffeeShop.h in Headers */ = {isa = PBXBuildFile; fileRef = 16B8C141267DBE6D0002B2BF /* CoffeeShop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16B8C159267DBF0A0002B2BF /* StoreInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */; };
 		16B8C15B267DBF1A0002B2BF /* StoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */; };
@@ -38,13 +40,15 @@
 
 /* Begin PBXFileReference section */
 		164C2B32267DE5DC00396EE5 /* ProductListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTests.swift; sourceTree = "<group>"; };
+		164C2B34267DE85500396EE5 /* FBSnapshotTestCase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSnapshotTestCase.xcframework; path = ../Carthage/Build/FBSnapshotTestCase.xcframework; sourceTree = "<group>"; };
+		164C2B36267DEACF00396EE5 /* Object+placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+placeholder.swift"; sourceTree = "<group>"; };
 		16997F67267DD160006AEDD2 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		16997F70267DDA65006AEDD2 /* SetImagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImagable.swift; sourceTree = "<group>"; };
 		16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoffeeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B8C141267DBE6D0002B2BF /* CoffeeShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeShop.h; sourceTree = "<group>"; };
 		16B8C142267DBE6D0002B2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16B8C147267DBE6D0002B2BF /* CoffeeShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		16B8C14C267DBE6D0002B2BF /* CoffeeShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopTests.swift; sourceTree = "<group>"; };
+		16B8C14C267DBE6D0002B2BF /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		16B8C14E267DBE6D0002B2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreInfo.storyboard; sourceTree = "<group>"; };
 		16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				164C2B35267DE85500396EE5 /* FBSnapshotTestCase.xcframework in Frameworks */,
 				16B8C148267DBE6D0002B2BF /* CoffeeShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,8 +120,9 @@
 		16B8C14B267DBE6D0002B2BF /* CoffeeShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				16B8C14C267DBE6D0002B2BF /* CoffeeShopTests.swift */,
 				16B8C14E267DBE6D0002B2BF /* Info.plist */,
+				164C2B36267DEACF00396EE5 /* Object+placeholder.swift */,
+				16B8C14C267DBE6D0002B2BF /* TestCase.swift */,
 			);
 			path = CoffeeShopTests;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 		16B8C176267DD0950002B2BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				164C2B34267DE85500396EE5 /* FBSnapshotTestCase.xcframework */,
 				16B8C177267DD0950002B2BF /* libCoffeeShopAPI.a */,
 			);
 			name = Frameworks;
@@ -288,9 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				164C2B37267DEACF00396EE5 /* Object+placeholder.swift in Sources */,
 				16B8C15D267DC2B90002B2BF /* StoreInfoViewControllerTests.swift in Sources */,
 				164C2B33267DE5DC00396EE5 /* ProductListViewControllerTests.swift in Sources */,
-				16B8C14D267DBE6D0002B2BF /* CoffeeShopTests.swift in Sources */,
+				16B8C14D267DBE6D0002B2BF /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
