@@ -9,7 +9,13 @@ final class ProductCell: UITableViewCell {
   @IBOutlet var minusButton: UIButton!
   @IBOutlet var plusButton: UIButton!
 
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    productImageView.layer.cornerRadius = 3
+  }
+
   func configureWith(_ value: Product) {
+    productImageView.setImage(with: value.imageURL)
     productNameLabel.text = value.name
     productPriceLabel.text = "\(value.price)"
   }
