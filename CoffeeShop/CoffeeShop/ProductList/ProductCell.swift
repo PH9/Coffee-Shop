@@ -9,6 +9,5 @@ final class ProductCell: UITableViewCell {
   @IBOutlet var plusButton: UIButton!
 
   @IBAction func reduceItem(_: Any) {}
-
   @IBAction func addItem(_: Any) {}
 }
