@@ -10,6 +10,8 @@
 		16B8C148267DBE6D0002B2BF /* CoffeeShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */; };
 		16B8C14D267DBE6D0002B2BF /* CoffeeShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C14C267DBE6D0002B2BF /* CoffeeShopTests.swift */; };
 		16B8C14F267DBE6D0002B2BF /* CoffeeShop.h in Headers */ = {isa = PBXBuildFile; fileRef = 16B8C141267DBE6D0002B2BF /* CoffeeShop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16B8C159267DBF0A0002B2BF /* StoreInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */; };
+		16B8C15B267DBF1A0002B2BF /* StoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		16B8C147267DBE6D0002B2BF /* CoffeeShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B8C14C267DBE6D0002B2BF /* CoffeeShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopTests.swift; sourceTree = "<group>"; };
 		16B8C14E267DBE6D0002B2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreInfo.storyboard; sourceTree = "<group>"; };
+		16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				16B8C141267DBE6D0002B2BF /* CoffeeShop.h */,
 				16B8C142267DBE6D0002B2BF /* Info.plist */,
+				16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */,
+				16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */,
 			);
 			path = CoffeeShop;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 				TargetAttributes = {
 					16B8C13D267DBE6D0002B2BF = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					16B8C146267DBE6D0002B2BF = {
 						CreatedOnToolsVersion = 12.5;
@@ -177,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B8C159267DBF0A0002B2BF /* StoreInfo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B8C15B267DBF1A0002B2BF /* StoreInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 		16B8C153267DBE6D0002B2BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.ph9.CoffeeShop;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +375,7 @@
 		16B8C154267DBE6D0002B2BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +399,7 @@
 		16B8C156267DBE6D0002B2BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoffeeShopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +417,7 @@
 		16B8C157267DBE6D0002B2BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoffeeShopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
