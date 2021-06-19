@@ -83,14 +83,11 @@
 		16B8C140267DBE6D0002B2BF /* CoffeeShop */ = {
 			isa = PBXGroup;
 			children = (
-				16B8C15E267DC35D0002B2BF /* Bundle+this.swift */,
 				16B8C141267DBE6D0002B2BF /* CoffeeShop.h */,
 				16B8C142267DBE6D0002B2BF /* Info.plist */,
-				16B8C160267DC40D0002B2BF /* ProductList.storyboard */,
-				16B8C162267DC48D0002B2BF /* ProductListViewController.swift */,
-				16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */,
-				16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */,
-				16B8C15C267DC2B90002B2BF /* StoreInfoViewControllerTests.swift */,
+				16B8C15E267DC35D0002B2BF /* Bundle+this.swift */,
+				16B8C164267DC4D10002B2BF /* ProductList */,
+				16B8C165267DC4DB0002B2BF /* StoreInfo */,
 			);
 			path = CoffeeShop;
 			sourceTree = "<group>";
@@ -102,6 +99,25 @@
 				16B8C14E267DBE6D0002B2BF /* Info.plist */,
 			);
 			path = CoffeeShopTests;
+			sourceTree = "<group>";
+		};
+		16B8C164267DC4D10002B2BF /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				16B8C160267DC40D0002B2BF /* ProductList.storyboard */,
+				16B8C162267DC48D0002B2BF /* ProductListViewController.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		16B8C165267DC4DB0002B2BF /* StoreInfo */ = {
+			isa = PBXGroup;
+			children = (
+				16B8C158267DBF0A0002B2BF /* StoreInfo.storyboard */,
+				16B8C15A267DBF1A0002B2BF /* StoreInfoViewController.swift */,
+				16B8C15C267DC2B90002B2BF /* StoreInfoViewControllerTests.swift */,
+			);
+			path = StoreInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
