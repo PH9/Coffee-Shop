@@ -17,8 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xd2-Bl-5id">
+                                <rect key="frame" x="0.0" y="44" width="414" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119" id="rTb-5g-Dc6"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="SRd-vl-oe4" kind="embed" id="osJ-Y0-8mD"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1P0-om-u46">
-                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="163" width="414" height="639"/>
                                 <connections>
                                     <segue destination="I4e-q0-lzM" kind="embed" id="NCo-aH-uq5"/>
                                 </connections>
@@ -46,19 +55,22 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1P0-om-u46" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="18M-OJ-YrO"/>
                             <constraint firstItem="nBL-pt-S5v" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2nz-7o-Z5Z"/>
+                            <constraint firstItem="xd2-Bl-5id" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7ax-SF-uU0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nBL-pt-S5v" secondAttribute="trailing" id="Gqh-wc-GVp"/>
+                            <constraint firstItem="xd2-Bl-5id" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ixf-yF-Kqd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nBL-pt-S5v" secondAttribute="bottom" id="KwQ-wP-63b"/>
                             <constraint firstItem="1P0-om-u46" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="L06-tS-Ch0"/>
                             <constraint firstItem="nBL-pt-S5v" firstAttribute="top" secondItem="1P0-om-u46" secondAttribute="bottom" id="TC7-lM-ooi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xd2-Bl-5id" secondAttribute="trailing" id="cDu-Ez-gDT"/>
+                            <constraint firstItem="1P0-om-u46" firstAttribute="top" secondItem="xd2-Bl-5id" secondAttribute="bottom" id="fu4-sX-s7l"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1P0-om-u46" secondAttribute="trailing" id="nB4-Ha-tHx"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="136"/>
+            <point key="canvasLocation" x="-178.2608695652174" y="135.9375"/>
         </scene>
         <!--ProductList-->
         <scene sceneID="iVh-9O-I1M">
@@ -67,6 +79,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlR-AS-NzI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="533" y="136"/>
+        </scene>
+        <!--StoreInfo-->
+        <scene sceneID="mID-ZC-BIg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StoreInfo" id="SRd-vl-oe4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewq-yc-bU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="-116"/>
         </scene>
     </scenes>
     <resources>
