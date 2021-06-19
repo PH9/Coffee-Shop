@@ -16,6 +16,7 @@
 		16B8C15F267DC35D0002B2BF /* Bundle+this.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C15E267DC35D0002B2BF /* Bundle+this.swift */; };
 		16B8C161267DC40D0002B2BF /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B8C160267DC40D0002B2BF /* ProductList.storyboard */; };
 		16B8C163267DC48D0002B2BF /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C162267DC48D0002B2BF /* ProductListViewController.swift */; };
+		16B8C167267DC5140002B2BF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C166267DC5140002B2BF /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		16B8C15E267DC35D0002B2BF /* Bundle+this.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+this.swift"; sourceTree = "<group>"; };
 		16B8C160267DC40D0002B2BF /* ProductList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
 		16B8C162267DC48D0002B2BF /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		16B8C166267DC5140002B2BF /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		16B8C164267DC4D10002B2BF /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				16B8C166267DC5140002B2BF /* ProductCell.swift */,
 				16B8C160267DC40D0002B2BF /* ProductList.storyboard */,
 				16B8C162267DC48D0002B2BF /* ProductListViewController.swift */,
 			);
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16B8C15B267DBF1A0002B2BF /* StoreInfoViewController.swift in Sources */,
+				16B8C167267DC5140002B2BF /* ProductCell.swift in Sources */,
 				16B8C163267DC48D0002B2BF /* ProductListViewController.swift in Sources */,
 				16B8C15F267DC35D0002B2BF /* Bundle+this.swift in Sources */,
 			);

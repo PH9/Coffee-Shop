@@ -17,13 +17,86 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Nb4-qH-J5Y">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProductCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Nb4-qH-J5Y" customClass="ProductCell" customModule="CoffeeShop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="153.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nb4-qH-J5Y" id="4o9-gG-Vd9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="153.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bjd-dj-fmZ">
+                                            <rect key="frame" x="16" y="16" width="382" height="121.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mZY-Th-l2V">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="3S6-dx-Q3a"/>
+                                                        <constraint firstAttribute="width" constant="120" id="ORp-1h-fK8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-zq-JGo">
+                                                    <rect key="frame" x="128" y="0.0" width="254" height="121"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z88-O2-8f0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="254" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product's price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efJ-FO-A4j">
+                                                            <rect key="frame" x="0.0" y="35.5" width="254" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Duh-o1-Qih">
+                                                            <rect key="frame" x="0.0" y="71" width="254" height="50"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-9n-gYh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="133" height="50"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </view>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsX-Uu-dLr">
+                                                                    <rect key="frame" x="141" y="0.0" width="30" height="50"/>
+                                                                    <state key="normal" title="-"/>
+                                                                    <connections>
+                                                                        <action selector="reduceItem:" destination="Nb4-qH-J5Y" eventType="touchUpInside" id="REl-DJ-NKO"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YTa-li-T6E">
+                                                                    <rect key="frame" x="179" y="0.0" width="37" height="50"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh9-iv-Xgp">
+                                                                    <rect key="frame" x="224" y="0.0" width="30" height="50"/>
+                                                                    <state key="normal" title="+"/>
+                                                                    <connections>
+                                                                        <action selector="addItem:" destination="Nb4-qH-J5Y" eventType="touchUpInside" id="IgN-fz-OC6"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="bjd-dj-fmZ" secondAttribute="trailing" constant="16" id="PYa-CL-v8R"/>
+                                        <constraint firstItem="bjd-dj-fmZ" firstAttribute="top" secondItem="4o9-gG-Vd9" secondAttribute="top" constant="16" id="YNf-Zc-J8Z"/>
+                                        <constraint firstAttribute="bottom" secondItem="bjd-dj-fmZ" secondAttribute="bottom" constant="16" id="fTA-Wo-aht"/>
+                                        <constraint firstItem="bjd-dj-fmZ" firstAttribute="leading" secondItem="4o9-gG-Vd9" secondAttribute="leading" constant="16" id="gHy-gA-oZj"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="itemCountTextField" destination="YTa-li-T6E" id="Scp-7v-bOc"/>
+                                    <outlet property="minusButton" destination="nsX-Uu-dLr" id="6jn-pv-eoT"/>
+                                    <outlet property="plusButton" destination="qh9-iv-Xgp" id="INc-ge-C9F"/>
+                                    <outlet property="productImageView" destination="mZY-Th-l2V" id="hCc-ts-NnA"/>
+                                    <outlet property="productNameLabel" destination="z88-O2-8f0" id="FhS-qh-eYB"/>
+                                    <outlet property="productPriceLabel" destination="efJ-FO-A4j" id="o8T-p4-W9s"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
