@@ -53,8 +53,18 @@ extension OrderViewController: CartUpdateSubscriber {
     }
 
     totalItemLabel.text = "\(totalItem)"
-    totalPriceLabel.text = "\(totalPrice).-"
+    totalPriceLabel.text = "\(toCurrency(number: totalPrice))"
 
     controlView.alpha = totalItem == 0 ? 0 : 1
+  }
+
+  private func toCurrency(number: Int) -> String {
+    let priceFormatter = NumberFormatter()
+    priceFormatter.numberStyle = .currency
+    priceFormatter.currencySymbol = ""
+    priceFormatter.maximumFractionDigits = 0
+
+    let nsNumber = NSNumber(value: number)
+    return priceFormatter.string(from: nsNumber) ?? "\(number)"
   }
 }
