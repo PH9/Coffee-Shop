@@ -1,6 +1,6 @@
 import Foundation
 
-class URLProtocolMock: URLProtocol {
+final class URLProtocolMock: URLProtocol {
   static var stub: [URL?: (data: Data?, response: HTTPURLResponse?, error: Error?)] = [:]
 
   override class func canInit(with _: URLRequest) -> Bool {
