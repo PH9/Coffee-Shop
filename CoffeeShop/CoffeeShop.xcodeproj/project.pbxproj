@@ -19,6 +19,7 @@
 		16B8C167267DC5140002B2BF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C166267DC5140002B2BF /* ProductCell.swift */; };
 		16B8C16A267DC9BF0002B2BF /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B8C169267DC9BF0002B2BF /* Order.storyboard */; };
 		16B8C16C267DC9CD0002B2BF /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C16B267DC9CD0002B2BF /* OrderViewController.swift */; };
+		16B8C175267DCC3E0002B2BF /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C174267DCC3E0002B2BF /* OrderButton.swift */; };
 		16B8C178267DD0950002B2BF /* libCoffeeShopAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C177267DD0950002B2BF /* libCoffeeShopAPI.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		16B8C166267DC5140002B2BF /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		16B8C169267DC9BF0002B2BF /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		16B8C16B267DC9CD0002B2BF /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		16B8C174267DCC3E0002B2BF /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		16B8C177267DD0950002B2BF /* libCoffeeShopAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCoffeeShopAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
