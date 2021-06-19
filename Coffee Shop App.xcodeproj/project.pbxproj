@@ -15,6 +15,7 @@
 		164EC923267C472000451540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164EC921267C472000451540 /* LaunchScreen.storyboard */; };
 		164EC92E267C472000451540 /* Coffee_ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC92D267C472000451540 /* Coffee_ShopTests.swift */; };
 		164EC939267C472000451540 /* Coffee_ShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164EC938267C472000451540 /* Coffee_ShopUITests.swift */; };
+		16997F6A267DD4EA006AEDD2 /* Starter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F69267DD4EA006AEDD2 /* Starter.swift */; };
 		16B8C171267DCAD10002B2BF /* CoffeeShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C170267DCAD10002B2BF /* CoffeeShop.framework */; };
 		16B8C172267DCAD10002B2BF /* CoffeeShop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C170267DCAD10002B2BF /* CoffeeShop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		164EC934267C472000451540 /* Coffee Shop AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee Shop AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		164EC938267C472000451540 /* Coffee_ShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_ShopUITests.swift; sourceTree = "<group>"; };
 		164EC93A267C472000451540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16997F69267DD4EA006AEDD2 /* Starter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starter.swift; sourceTree = "<group>"; };
 		16B8C170267DCAD10002B2BF /* CoffeeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoffeeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,13 +120,14 @@
 		164EC915267C471F00451540 /* Coffee Shop App */ = {
 			isa = PBXGroup;
 			children = (
-				164EC924267C472000451540 /* Info.plist */,
 				164EC916267C471F00451540 /* AppDelegate.swift */,
-				164EC918267C471F00451540 /* SceneDelegate.swift */,
-				164EC91A267C471F00451540 /* ViewController.swift */,
 				164EC91F267C472000451540 /* Assets.xcassets */,
+				164EC924267C472000451540 /* Info.plist */,
 				164EC921267C472000451540 /* LaunchScreen.storyboard */,
 				164EC91C267C471F00451540 /* Main.storyboard */,
+				164EC918267C471F00451540 /* SceneDelegate.swift */,
+				16997F69267DD4EA006AEDD2 /* Starter.swift */,
+				164EC91A267C471F00451540 /* ViewController.swift */,
 			);
 			path = "Coffee Shop App";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				164EC91B267C471F00451540 /* ViewController.swift in Sources */,
+				16997F6A267DD4EA006AEDD2 /* Starter.swift in Sources */,
 				164EC917267C471F00451540 /* AppDelegate.swift in Sources */,
 				164EC919267C471F00451540 /* SceneDelegate.swift in Sources */,
 			);
