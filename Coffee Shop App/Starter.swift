@@ -8,5 +8,6 @@ enum Starter {
     window.rootViewController = navigation
 
     window.makeKeyAndVisible()
+    Provider.setup()
   }
 }
