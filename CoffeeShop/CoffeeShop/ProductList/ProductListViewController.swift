@@ -4,7 +4,7 @@ import UIKit
 final class ProductListViewController: UITableViewController {
   let interactor = ProductListInteractor()
   var products: [Product] = []
-  weak var cart: Cart!
+  weak var cart: Cart<Product>!
 
   override func viewDidLoad() {
     super.viewDidLoad()

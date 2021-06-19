@@ -1,12 +1,8 @@
 import CoffeeShopAPI
 import UIKit
 
-class Cart {
-  var items: [Product: Int] = [:]
-}
-
 public final class OrderViewController: UIViewController {
-  private var cart = Cart()
+  private var cart = Cart<Product>()
   weak var productListViewController: ProductListViewController?
 
   override public func viewDidLoad() {
