@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xd2-Bl-5id">
+                            <containerView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xd2-Bl-5id">
                                 <rect key="frame" x="0.0" y="44" width="414" height="119"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="119" id="rTb-5g-Dc6"/>
+                                    <constraint firstAttribute="height" constant="119" placeholder="YES" id="Ybt-vX-esA"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="SRd-vl-oe4" kind="embed" id="osJ-Y0-8mD"/>

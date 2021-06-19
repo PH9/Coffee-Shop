@@ -4,6 +4,7 @@ import UIKit
 final class ProductListViewController: UITableViewController {
   let interactor = ProductListInteractor()
   var products: [Product] = []
+  weak var cart: Cart!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,7 +30,7 @@ final class ProductListViewController: UITableViewController {
       fatalError("Could not dequeue cell")
     }
 
-    cell.configureWith(products[indexPath.row])
+    cell.configureWith((product: products[indexPath.row], cart: cart))
 
     return cell
   }

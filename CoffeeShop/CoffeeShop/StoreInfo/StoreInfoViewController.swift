@@ -10,6 +10,7 @@ final class StoreInfoViewController: UIViewController {
     super.viewDidLoad()
     renderLoading()
     getStoreInfo()
+    view.translatesAutoresizingMaskIntoConstraints = false
   }
 
   private func renderLoading() {
