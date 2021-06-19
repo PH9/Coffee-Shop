@@ -8,6 +8,10 @@ final class ProductListViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     interactor.presenter.viewController = self
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     interactor.getProducts()
   }
 

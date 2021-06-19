@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		164C2B33267DE5DC00396EE5 /* ProductListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B32267DE5DC00396EE5 /* ProductListViewControllerTests.swift */; };
 		16997F68267DD160006AEDD2 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F67267DD160006AEDD2 /* ProductListInteractor.swift */; };
 		16997F71267DDA65006AEDD2 /* SetImagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F70267DDA65006AEDD2 /* SetImagable.swift */; };
 		16B8C148267DBE6D0002B2BF /* CoffeeShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164C2B32267DE5DC00396EE5 /* ProductListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTests.swift; sourceTree = "<group>"; };
 		16997F67267DD160006AEDD2 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		16997F70267DDA65006AEDD2 /* SetImagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImagable.swift; sourceTree = "<group>"; };
 		16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoffeeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				16B8C160267DC40D0002B2BF /* ProductList.storyboard */,
 				16997F67267DD160006AEDD2 /* ProductListInteractor.swift */,
 				16B8C162267DC48D0002B2BF /* ProductListViewController.swift */,
+				164C2B32267DE5DC00396EE5 /* ProductListViewControllerTests.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16B8C15D267DC2B90002B2BF /* StoreInfoViewControllerTests.swift in Sources */,
+				164C2B33267DE5DC00396EE5 /* ProductListViewControllerTests.swift in Sources */,
 				16B8C14D267DBE6D0002B2BF /* CoffeeShopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
