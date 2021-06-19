@@ -5,10 +5,14 @@ public final class OrderViewController: UIViewController {
   internal var cart = Cart<Product>()
   weak var productListViewController: ProductListViewController?
 
+  @IBOutlet var totalItemLabel: UILabel!
   @IBOutlet var totalPriceLabel: UILabel!
+  @IBOutlet var controlView: UIView!
 
   override public func viewDidLoad() {
     super.viewDidLoad()
+    updateControl()
+    controlView.layer.cornerRadius = 3
     cart.subscribeToUpdate(subscriber: self)
     productListViewController?.cart = cart
   }
@@ -36,16 +40,21 @@ public final class OrderViewController: UIViewController {
 }
 
 extension OrderViewController: CartUpdateSubscriber {
-  func cart<T>(_ cart: Cart<T>, didUpdate _: [T: Int]) where T: Hashable {
-    guard let cart = cart as? Cart<Product> else {
-      return
+  func cart<T>(_: Cart<T>, didUpdate _: [T: Int]) where T: Hashable {
+    updateControl()
+  }
+
+  private func updateControl() {
+    var totalItem = 0
+    var totalPrice = 0
+    cart.items.forEach { product, count in
+      totalItem += count
+      totalPrice += product.price * count
     }
 
-    let totalPrice = cart.items.reduce(0) { result, value in
-      let (product, count) = value
-      return result + product.price * count
-    }
-
+    totalItemLabel.text = "\(totalItem)"
     totalPriceLabel.text = "\(totalPrice).-"
+
+    controlView.alpha = totalItem == 0 ? 0 : 1
   }
 }
