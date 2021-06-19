@@ -8,6 +8,7 @@ final class ProductListViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.keyboardDismissMode = .onDrag
     interactor.presenter.viewController = self
   }
 

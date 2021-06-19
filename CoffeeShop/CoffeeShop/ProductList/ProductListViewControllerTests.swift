@@ -14,6 +14,7 @@ final class ProductListViewControllerTests: TestCase {
   func test_viewDidLoad_shouldSetUpViewControllerPresenter() {
     sut.viewDidLoad()
 
+    XCTAssertEqual(sut.tableView.keyboardDismissMode, .onDrag)
     XCTAssertEqual(sut.interactor.presenter.viewController, sut)
   }
 
