@@ -125,6 +125,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		166DA039267F42440003C482 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				16B095AE267DFB0E000236D7 /* Cart.swift */,
+				166DA02E267F08810003C482 /* CartTests.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		16A6E601267EF82D00EE5E8A /* BasketSummary */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +169,7 @@
 				16B8C141267DBE6D0002B2BF /* CoffeeShop.h */,
 				16B8C142267DBE6D0002B2BF /* Info.plist */,
 				16A6E601267EF82D00EE5E8A /* BasketSummary */,
+				166DA039267F42440003C482 /* Cart */,
 				164C2B3A267DF02E00396EE5 /* Library */,
 				16B8C168267DC9960002B2BF /* Order */,
 				16B8C164267DC4D10002B2BF /* ProductList */,
@@ -204,8 +214,6 @@
 		16B8C168267DC9960002B2BF /* Order */ = {
 			isa = PBXGroup;
 			children = (
-				16B095AE267DFB0E000236D7 /* Cart.swift */,
-				166DA02E267F08810003C482 /* CartTests.swift */,
 				16B8C169267DC9BF0002B2BF /* Order.storyboard */,
 				16B8C174267DCC3E0002B2BF /* OrderButton.swift */,
 				16B8C16B267DC9CD0002B2BF /* OrderViewController.swift */,
