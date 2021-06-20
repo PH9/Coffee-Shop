@@ -39,7 +39,7 @@ final class ProductCell: UITableViewCell {
 
 extension ProductCell: UITextFieldDelegate {
   func textFieldShouldReturn(_: UITextField) -> Bool {
-    let count = Int(itemCountTextField.text!)
+    let count = UInt(itemCountTextField.text!)
     itemCountTextField.text = "\(cart.set(item: product, count: count))"
     endEditing(false)
     return true

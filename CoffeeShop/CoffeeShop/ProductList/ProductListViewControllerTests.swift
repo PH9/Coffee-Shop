@@ -1,4 +1,5 @@
 @testable import CoffeeShop
+import CoffeeShopAPI
 import XCTest
 
 final class ProductListViewControllerTests: TestCase {
@@ -20,6 +21,8 @@ final class ProductListViewControllerTests: TestCase {
 
   func testView() {
     sut.view.frame = CGRect(x: 0, y: 0, width: 320, height: 320)
+    let cart: Cart<Product> = .init()
+    sut.cart = cart
 
     sut.render(products: [
       .init(name: "Americano", price: 99, imageURL: .placeholder),

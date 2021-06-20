@@ -40,13 +40,13 @@ public final class OrderViewController: UIViewController {
 }
 
 extension OrderViewController: CartUpdateSubscriber {
-  func cart<T>(_: Cart<T>, didUpdate _: [T: Int]) where T: Hashable {
+  func cart<T>(_: Cart<T>, didUpdate _: [T: UInt]) where T: Hashable {
     updateControl()
   }
 
   private func updateControl() {
-    var totalItem = 0
-    var totalPrice = 0
+    var totalItem: UInt = 0
+    var totalPrice: UInt = 0
     cart.items.forEach { product, count in
       totalItem += count
       totalPrice += product.price * count
@@ -58,7 +58,7 @@ extension OrderViewController: CartUpdateSubscriber {
     controlView.alpha = totalItem == 0 ? 0 : 1
   }
 
-  private func toCurrency(number: Int) -> String {
+  private func toCurrency(number: UInt) -> String {
     let priceFormatter = NumberFormatter()
     priceFormatter.numberStyle = .currency
     priceFormatter.currencySymbol = ""
