@@ -13,7 +13,7 @@ final class ImageSetterProviderSpy: ImageSetterProvider {
 }
 
 final class ImageSetterProviderTests: XCTestCase {
-  func test() {
+  func test_whenSetImage_shouldCallImageSetterProvider() {
     let spy = ImageSetterProviderSpy()
     CoffeeShopConfigurator.setSetImageProvider(spy)
     let imageView = UIImageView()
