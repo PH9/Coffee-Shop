@@ -16,6 +16,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="pMR-od-HVn">
+                            <rect key="frame" x="0.0" y="150.50000034679067" width="414" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-Lz-cru">
+                                    <rect key="frame" x="310" y="156" width="104" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="pyN-bn-zMq"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="32" minY="0.0" maxX="32" maxY="0.0"/>
+                                    <state key="normal" title="Order"/>
+                                    <connections>
+                                        <action selector="order:" destination="824-fS-870" eventType="touchUpInside" id="e33-fb-WQ3"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AV-0e-B2R">
+                                    <rect key="frame" x="265" y="156" width="37" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxR-Pp-Vo0">
+                                    <rect key="frame" x="291.5" y="179.5" width="10.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="29C-fZ-REK">
+                                    <rect key="frame" x="16" y="36.5" width="382" height="103.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJJ-ab-9iU">
+                                    <rect key="frame" x="16" y="8" width="382" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="DJJ-ab-9iU" secondAttribute="trailing" constant="16" id="3JJ-1v-g76"/>
+                                <constraint firstItem="SxR-Pp-Vo0" firstAttribute="bottom" secondItem="MfV-Lz-cru" secondAttribute="bottom" id="934-JQ-Nrz"/>
+                                <constraint firstItem="MfV-Lz-cru" firstAttribute="leading" secondItem="SxR-Pp-Vo0" secondAttribute="trailing" constant="8" symbolic="YES" id="Hmg-Po-LG8"/>
+                                <constraint firstItem="29C-fZ-REK" firstAttribute="leading" secondItem="pMR-od-HVn" secondAttribute="leading" constant="16" id="KJF-yL-Bqz"/>
+                                <constraint firstItem="MfV-Lz-cru" firstAttribute="top" secondItem="29C-fZ-REK" secondAttribute="bottom" constant="16" id="Lg8-R4-WR7"/>
+                                <constraint firstItem="9AV-0e-B2R" firstAttribute="top" secondItem="MfV-Lz-cru" secondAttribute="top" id="Lvd-vy-5OF"/>
+                                <constraint firstAttribute="bottom" secondItem="MfV-Lz-cru" secondAttribute="bottom" id="Lxn-g5-yKj"/>
+                                <constraint firstItem="MfV-Lz-cru" firstAttribute="leading" secondItem="9AV-0e-B2R" secondAttribute="trailing" constant="8" symbolic="YES" id="Nwo-co-RaX"/>
+                                <constraint firstItem="29C-fZ-REK" firstAttribute="top" secondItem="DJJ-ab-9iU" secondAttribute="bottom" constant="8" id="UYQ-sJ-J7M"/>
+                                <constraint firstAttribute="trailing" secondItem="29C-fZ-REK" secondAttribute="trailing" constant="16" id="Xdn-dv-fgj"/>
+                                <constraint firstAttribute="trailing" secondItem="MfV-Lz-cru" secondAttribute="trailing" id="ZYo-cg-vmo"/>
+                                <constraint firstItem="DJJ-ab-9iU" firstAttribute="top" secondItem="pMR-od-HVn" secondAttribute="top" constant="8" id="b79-S8-Qop"/>
+                                <constraint firstItem="DJJ-ab-9iU" firstAttribute="leading" secondItem="pMR-od-HVn" secondAttribute="leading" constant="16" id="sfk-b3-7Ld"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasketProductCell" id="8pP-Tx-GBn" customClass="BasketProductCell" customModule="CoffeeShop" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="101.5"/>
@@ -102,6 +160,9 @@
                             <outlet property="delegate" destination="824-fS-870" id="iK1-t9-Sb9"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="addressTextView" destination="29C-fZ-REK" id="CYB-pk-chq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUe-4w-SXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,6 +170,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

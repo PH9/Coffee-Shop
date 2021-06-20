@@ -2,7 +2,7 @@ import CoffeeShopAPI
 import UIKit
 
 final class BasketSummaryDataSource: NSObject, UITableViewDataSource {
-  private let items: [(Product, UInt)]
+  let items: [(Product, UInt)]
 
   init(items: [(Product, UInt)]) {
     self.items = items

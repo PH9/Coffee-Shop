@@ -6,11 +6,11 @@ public struct CreateOrder: Requestable {
   public let expectedStatusCode: ClosedRange<Int> = 201 ... 201
   public typealias ResponseType = EmptyResponse
 
-  let product: Product
+  let products: [Product]
   let address: String
 
-  public init(product: Product, address: String) {
-    self.product = product
+  public init(products: [Product], address: String) {
+    self.products = products
     self.address = address
   }
 }

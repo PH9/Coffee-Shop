@@ -5,6 +5,7 @@ extension Product: Sellable {}
 
 public final class OrderViewController: UIViewController {
   internal var basket = Basket<Product>()
+  weak var storeInfoViewController: StoreInfoViewController?
   weak var productListViewController: ProductListViewController?
 
   @IBOutlet var controlView: UIView!
@@ -32,6 +33,8 @@ public final class OrderViewController: UIViewController {
     switch segue.destination {
     case let vc as ProductListViewController:
       productListViewController = vc
+    case let vc as StoreInfoViewController:
+      storeInfoViewController = vc
     default:
       break
     }
@@ -40,7 +43,11 @@ public final class OrderViewController: UIViewController {
   }
 
   @IBAction func gotoBasketSummary(_: Any) {
-    let vc = BasketSummaryViewController.instantiate(items: Array(_immutableCocoaArray: basket))
+    guard let storeInfo = storeInfoViewController?.storeInfo else {
+      return
+    }
+
+    let vc = BasketSummaryViewController.instantiate(items: Array(basket.items), storeInfo: storeInfo)
     present(vc, animated: true, completion: nil)
   }
 }

@@ -6,6 +6,8 @@ final class StoreInfoViewController: UIViewController {
   @IBOutlet var ratingLabel: UILabel!
   @IBOutlet var workHourLabel: UILabel!
 
+  private(set) var storeInfo: StoreInfo?
+
   override func viewDidLoad() {
     super.viewDidLoad()
     renderLoading()
@@ -21,10 +23,12 @@ final class StoreInfoViewController: UIViewController {
 
   private func getStoreInfo() {
     StoreInfoRequest().request { [weak self] result in
+      guard let self = self else { return }
       switch result {
       case let .success(info):
+        self.storeInfo = info
         DispatchQueue.main.async {
-          self?.render(info)
+          self.render(info)
         }
       default:
         break
