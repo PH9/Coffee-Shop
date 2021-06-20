@@ -1,10 +1,14 @@
 import CoffeeShopAPI
 
 protocol CartUpdateSubscriber: AnyObject {
-  func cart<T: Hashable>(_ cart: Cart<T>, didUpdate items: [T: UInt])
+  func cart<T: Sellable>(_ cart: Cart<T>, didUpdate items: [T: UInt])
 }
 
-final class Cart<T: Hashable> {
+protocol Sellable: Hashable {
+  var price: UInt { get }
+}
+
+final class Cart<T: Sellable> {
   private(set) var items: [T: UInt] = [:] {
     didSet {
       subscribers.forEach { subscriber in

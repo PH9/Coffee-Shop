@@ -35,42 +35,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBL-pt-S5v">
                                 <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-d3-gJQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-d3-gJQ" customClass="OrderButton" customModule="CoffeeShop" customModuleProvider="target">
                                         <rect key="frame" x="16" y="8" width="382" height="44"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="T3A-iW-rZJ"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
                                         <connections>
                                             <action selector="gotoBasketSummary:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dpb-ak-7Xj"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdV-OJ-Q1H">
-                                        <rect key="frame" x="32" y="19.5" width="11" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbB-p0-PaO">
-                                        <rect key="frame" x="360" y="19.5" width="22" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="UfI-d3-gJQ" secondAttribute="bottom" constant="8" id="2jw-9s-B2D"/>
-                                    <constraint firstItem="qbB-p0-PaO" firstAttribute="centerY" secondItem="UfI-d3-gJQ" secondAttribute="centerY" id="9aa-Ee-nTc"/>
                                     <constraint firstItem="UfI-d3-gJQ" firstAttribute="top" secondItem="nBL-pt-S5v" secondAttribute="top" constant="8" id="B1P-Zi-iag"/>
                                     <constraint firstItem="UfI-d3-gJQ" firstAttribute="leading" secondItem="nBL-pt-S5v" secondAttribute="leading" constant="16" id="P2e-0i-L2i"/>
                                     <constraint firstAttribute="trailing" secondItem="UfI-d3-gJQ" secondAttribute="trailing" constant="16" id="RgC-dy-AQs"/>
-                                    <constraint firstItem="gdV-OJ-Q1H" firstAttribute="centerY" secondItem="UfI-d3-gJQ" secondAttribute="centerY" id="VlI-bM-0d1"/>
-                                    <constraint firstItem="qbB-p0-PaO" firstAttribute="trailing" secondItem="UfI-d3-gJQ" secondAttribute="trailing" constant="-16" id="aVG-ZZ-eow"/>
-                                    <constraint firstItem="gdV-OJ-Q1H" firstAttribute="leading" secondItem="UfI-d3-gJQ" secondAttribute="leading" constant="16" id="epx-CQ-mrf"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -91,8 +71,7 @@
                     </view>
                     <connections>
                         <outlet property="controlView" destination="nBL-pt-S5v" id="stb-h2-Nkw"/>
-                        <outlet property="totalItemLabel" destination="gdV-OJ-Q1H" id="caP-yU-L0X"/>
-                        <outlet property="totalPriceLabel" destination="qbB-p0-PaO" id="7rD-eg-qs0"/>
+                        <outlet property="gotoBasketSummaryButton" destination="UfI-d3-gJQ" id="T3h-85-elV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -116,12 +95,14 @@
             <point key="canvasLocation" x="543" y="-116"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="UfI-d3-gJQ">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

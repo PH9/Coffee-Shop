@@ -1,6 +1,8 @@
 import CoffeeShopAPI
 import UIKit
 
+extension Product: Sellable {}
+
 public final class OrderViewController: UIViewController {
   internal var cart = Cart<Product>()
   weak var productListViewController: ProductListViewController?
@@ -8,10 +10,10 @@ public final class OrderViewController: UIViewController {
   @IBOutlet var totalItemLabel: UILabel!
   @IBOutlet var totalPriceLabel: UILabel!
   @IBOutlet var controlView: UIView!
+  @IBOutlet var gotoBasketSummaryButton: OrderButton!
 
   override public func viewDidLoad() {
     super.viewDidLoad()
-    updateControl()
     controlView <~ rounded
     cart.subscribeToUpdate(subscriber: self)
     productListViewController?.cart = cart
@@ -45,31 +47,7 @@ public final class OrderViewController: UIViewController {
 }
 
 extension OrderViewController: CartUpdateSubscriber {
-  func cart<T>(_: Cart<T>, didUpdate _: [T: UInt]) where T: Hashable {
-    updateControl()
-  }
-
-  private func updateControl() {
-    var totalItem: UInt = 0
-    var totalPrice: UInt = 0
-    cart.items.forEach { product, count in
-      totalItem += count
-      totalPrice += product.price * count
-    }
-
-    totalItemLabel.text = "\(totalItem)"
-    totalPriceLabel.text = "\(toCurrency(number: totalPrice))"
-
-    controlView.alpha = totalItem == 0 ? 0 : 1
-  }
-
-  private func toCurrency(number: UInt) -> String {
-    let priceFormatter = NumberFormatter()
-    priceFormatter.numberStyle = .currency
-    priceFormatter.currencySymbol = ""
-    priceFormatter.maximumFractionDigits = 0
-
-    let nsNumber = NSNumber(value: number)
-    return priceFormatter.string(from: nsNumber) ?? "\(number)"
+  func cart<T>(_: Cart<T>, didUpdate items: [T: UInt]) where T: Hashable {
+    gotoBasketSummaryButton.configureWith(items)
   }
 }
