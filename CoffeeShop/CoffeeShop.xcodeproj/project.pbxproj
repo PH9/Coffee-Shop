@@ -11,8 +11,11 @@
 		164C2B35267DE85500396EE5 /* FBSnapshotTestCase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164C2B34267DE85500396EE5 /* FBSnapshotTestCase.xcframework */; };
 		164C2B37267DEACF00396EE5 /* Object+placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B36267DEACF00396EE5 /* Object+placeholder.swift */; };
 		164C2B3C267DF05100396EE5 /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C2B3B267DF05100396EE5 /* UIViewController+instantiate.swift */; };
+		166DA02D267EFC880003C482 /* BasketProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA02C267EFC880003C482 /* BasketProductCell.swift */; };
 		16997F68267DD160006AEDD2 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F67267DD160006AEDD2 /* ProductListInteractor.swift */; };
 		16997F71267DDA65006AEDD2 /* SetImagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F70267DDA65006AEDD2 /* SetImagable.swift */; };
+		16A6E603267EF84000EE5E8A /* BasketSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6E602267EF84000EE5E8A /* BasketSummaryViewController.swift */; };
+		16A6E609267EF95E00EE5E8A /* BasketSummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A6E608267EF95E00EE5E8A /* BasketSummary.storyboard */; };
 		16B095AF267DFB0E000236D7 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B095AE267DFB0E000236D7 /* Cart.swift */; };
 		16B8C148267DBE6D0002B2BF /* CoffeeShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */; };
 		16B8C14D267DBE6D0002B2BF /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C14C267DBE6D0002B2BF /* TestCase.swift */; };
@@ -45,8 +48,11 @@
 		164C2B34267DE85500396EE5 /* FBSnapshotTestCase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSnapshotTestCase.xcframework; path = ../Carthage/Build/FBSnapshotTestCase.xcframework; sourceTree = "<group>"; };
 		164C2B36267DEACF00396EE5 /* Object+placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+placeholder.swift"; sourceTree = "<group>"; };
 		164C2B3B267DF05100396EE5 /* UIViewController+instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiate.swift"; sourceTree = "<group>"; };
+		166DA02C267EFC880003C482 /* BasketProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductCell.swift; sourceTree = "<group>"; };
 		16997F67267DD160006AEDD2 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		16997F70267DDA65006AEDD2 /* SetImagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImagable.swift; sourceTree = "<group>"; };
+		16A6E602267EF84000EE5E8A /* BasketSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketSummaryViewController.swift; sourceTree = "<group>"; };
+		16A6E608267EF95E00EE5E8A /* BasketSummary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasketSummary.storyboard; sourceTree = "<group>"; };
 		16B095AE267DFB0E000236D7 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		16B8C13E267DBE6D0002B2BF /* CoffeeShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoffeeShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B8C141267DBE6D0002B2BF /* CoffeeShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeShop.h; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		16A6E601267EF82D00EE5E8A /* BasketSummary */ = {
+			isa = PBXGroup;
+			children = (
+				166DA02C267EFC880003C482 /* BasketProductCell.swift */,
+				16A6E608267EF95E00EE5E8A /* BasketSummary.storyboard */,
+				16A6E602267EF84000EE5E8A /* BasketSummaryViewController.swift */,
+			);
+			path = BasketSummary;
+			sourceTree = "<group>";
+		};
 		16B8C134267DBE6D0002B2BF = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +138,7 @@
 			children = (
 				16B8C141267DBE6D0002B2BF /* CoffeeShop.h */,
 				16B8C142267DBE6D0002B2BF /* Info.plist */,
+				16A6E601267EF82D00EE5E8A /* BasketSummary */,
 				164C2B3A267DF02E00396EE5 /* Library */,
 				16B8C168267DC9960002B2BF /* Order */,
 				16B8C164267DC4D10002B2BF /* ProductList */,
@@ -277,6 +294,7 @@
 				16B8C161267DC40D0002B2BF /* ProductList.storyboard in Resources */,
 				16B8C159267DBF0A0002B2BF /* StoreInfo.storyboard in Resources */,
 				16B8C16A267DC9BF0002B2BF /* Order.storyboard in Resources */,
+				16A6E609267EF95E00EE5E8A /* BasketSummary.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +315,9 @@
 				16B8C15B267DBF1A0002B2BF /* StoreInfoViewController.swift in Sources */,
 				16997F68267DD160006AEDD2 /* ProductListInteractor.swift in Sources */,
 				16997F71267DDA65006AEDD2 /* SetImagable.swift in Sources */,
+				16A6E603267EF84000EE5E8A /* BasketSummaryViewController.swift in Sources */,
 				164C2B3C267DF05100396EE5 /* UIViewController+instantiate.swift in Sources */,
+				166DA02D267EFC880003C482 /* BasketProductCell.swift in Sources */,
 				16B8C16C267DC9CD0002B2BF /* OrderViewController.swift in Sources */,
 				16B8C167267DC5140002B2BF /* ProductCell.swift in Sources */,
 				16B8C163267DC48D0002B2BF /* ProductListViewController.swift in Sources */,
