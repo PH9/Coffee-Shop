@@ -3,4 +3,4 @@ trailing_comma:
 
 exclude:
   - Carthage/
-  - DaerivedData/
+  - DerviedData/

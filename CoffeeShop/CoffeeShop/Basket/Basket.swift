@@ -55,6 +55,10 @@ final class Basket<T: Sellable> {
     return count
   }
 
+  func removeAll() {
+    items = [:]
+  }
+
   private var subscribers: [BasketUpdateSubscriber] = []
   func subscribeToUpdate(subscriber: BasketUpdateSubscriber) {
     subscribers.append(subscriber)

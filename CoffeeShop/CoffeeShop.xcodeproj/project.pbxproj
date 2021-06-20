@@ -46,6 +46,7 @@
 		16B8C16C267DC9CD0002B2BF /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C16B267DC9CD0002B2BF /* OrderViewController.swift */; };
 		16B8C175267DCC3E0002B2BF /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B8C174267DCC3E0002B2BF /* OrderButton.swift */; };
 		16B8C178267DD0950002B2BF /* libCoffeeShopAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B8C177267DD0950002B2BF /* libCoffeeShopAPI.a */; };
+		16B90155267F8280009A2D6C /* DefaultAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B90154267F8280009A2D6C /* DefaultAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		16B8C16B267DC9CD0002B2BF /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		16B8C174267DCC3E0002B2BF /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		16B8C177267DD0950002B2BF /* libCoffeeShopAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCoffeeShopAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B90154267F8280009A2D6C /* DefaultAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			children = (
 				16B8C141267DBE6D0002B2BF /* CoffeeShop.h */,
 				16B8C142267DBE6D0002B2BF /* Info.plist */,
+				16B90153267F8272009A2D6C /* Alert */,
 				166DA039267F42440003C482 /* Basket */,
 				16A6E601267EF82D00EE5E8A /* BasketSummary */,
 				164C2B3A267DF02E00396EE5 /* Library */,
@@ -266,6 +269,14 @@
 				16B8C177267DD0950002B2BF /* libCoffeeShopAPI.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16B90153267F8272009A2D6C /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				16B90154267F8280009A2D6C /* DefaultAlert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +407,7 @@
 				16B8C163267DC48D0002B2BF /* ProductListViewController.swift in Sources */,
 				167F1F34267F4ED30057EAE6 /* UITableView+dequeue.swift in Sources */,
 				166DA045267F44500003C482 /* CoffeeShopConfigurator.swift in Sources */,
+				16B90155267F8280009A2D6C /* DefaultAlert.swift in Sources */,
 				16B095AF267DFB0E000236D7 /* Basket.swift in Sources */,
 				16B8C175267DCC3E0002B2BF /* OrderButton.swift in Sources */,
 				16B8C15F267DC35D0002B2BF /* Bundle+this.swift in Sources */,

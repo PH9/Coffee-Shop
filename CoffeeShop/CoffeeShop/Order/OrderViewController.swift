@@ -25,7 +25,7 @@ public final class OrderViewController: UIViewController {
   }
 
   deinit {
-    basket = Basket<Product>()
+    basket = .init()
   }
 
   override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,6 +48,7 @@ public final class OrderViewController: UIViewController {
     }
 
     let vc = BasketSummaryViewController.instantiate(items: Array(basket.items), storeInfo: storeInfo)
+    vc.delegate = self
     present(vc, animated: true, completion: nil)
   }
 }
@@ -55,5 +56,11 @@ public final class OrderViewController: UIViewController {
 extension OrderViewController: BasketUpdateSubscriber {
   func basket<T>(_: Basket<T>, didUpdate items: [T: UInt]) where T: Hashable {
     gotoBasketSummaryButton.configureWith(items)
+  }
+}
+
+extension OrderViewController: BasketSummaryViewControllerDelegate {
+  func basketSummary(_: BasketSummaryViewController, didCreateOrder _: Order) {
+    basket.removeAll()
   }
 }

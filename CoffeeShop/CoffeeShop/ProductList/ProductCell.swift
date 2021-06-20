@@ -24,6 +24,7 @@ final class ProductCell: UITableViewCell {
     productImageView.setImage(with: product.imageURL)
     productNameLabel.text = product.name
     productPriceLabel.text = "\(product.price)"
+    itemCountTextField.text = "\(basket.items[product] ?? 0)"
   }
 
   @IBAction func reduceItem(_ sender: UITextField) {

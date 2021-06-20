@@ -31,6 +31,7 @@ final class StoreInfoViewController: UIViewController {
           self.render(info)
         }
       default:
+        // TODO: Handle Error
         break
       }
     }

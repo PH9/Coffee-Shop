@@ -63,6 +63,13 @@ public extension Requestable {
         return
       }
 
+      if ResponseType.self == Empty.self {
+        // swiftlint:disable force_cast
+        completion(.success(Empty() as! Self.ResponseType))
+        // swiftlint:enable force_cast
+        return
+      }
+
       do {
         let value = try JSONDecoder().decode(ResponseType.self, from: data)
         completion(.success(value))

@@ -10,6 +10,7 @@ final class ProductListInteractor {
         self?.presenter.render(products: products)
       case let .failure(error):
         print(error)
+        // TODO: Handle error
       }
     }
   }
