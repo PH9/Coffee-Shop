@@ -13,12 +13,31 @@ class BasketProductCell: UITableViewCell {
   @IBOutlet var productPriceLabel: UILabel!
   @IBOutlet var productCountLabel: UILabel!
   @IBOutlet var totalLabel: UILabel!
+  @IBOutlet var productStack: UIStackView!
+  @IBOutlet var priceStack: UIStackView!
+
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    update()
+  }
 
   func configureWith(_ value: BasketProduct) {
     productImageView.setImage(with: value.imageURL)
     productNameLabel.text = value.name
     productPriceLabel.text = "\(value.price)"
-    productCountLabel.text = "\(value.itemCount)"
+    productCountLabel.text = "x\(value.itemCount)"
     totalLabel.text = "\(value.price * value.itemCount)"
+  }
+
+  private func update() {
+    if traitCollection.preferredContentSizeCategory.isAccessibilityCategory {
+      productStack.axis = .vertical
+      priceStack.axis = .vertical
+      productCountLabel.textAlignment = .right
+    } else {
+      productStack.axis = .horizontal
+      priceStack.axis = .horizontal
+      productCountLabel.textAlignment = .left
+    }
   }
 }
