@@ -12,7 +12,7 @@ public final class OrderViewController: UIViewController {
   override public func viewDidLoad() {
     super.viewDidLoad()
     updateControl()
-    controlView.layer.cornerRadius = 3
+    controlView <~ rounded
     cart.subscribeToUpdate(subscriber: self)
     productListViewController?.cart = cart
   }

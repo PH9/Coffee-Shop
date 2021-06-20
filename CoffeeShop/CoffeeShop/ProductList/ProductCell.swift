@@ -14,7 +14,7 @@ final class ProductCell: UITableViewCell {
 
   override func awakeFromNib() {
     super.awakeFromNib()
-    productImageView.layer.cornerRadius = 3
+    productImageView <~ rounded
     itemCountTextField.delegate = self
   }
 
