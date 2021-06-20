@@ -1,6 +1,6 @@
 extension UInt {
-  func toCurrency() -> String {
+  func toCurrency(formatter: NumberFormatter = .currency) -> String {
     let number = NSNumber(value: self)
-    return NumberFormatter.currency.string(from: number) ?? "\(self)"
+    return formatter.string(from: number) ?? "\(self)"
   }
 }
