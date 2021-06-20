@@ -119,8 +119,8 @@
 				166DA035267F40A50003C482 /* NumberFormatter+.swift */,
 				166DA03C267F430B0003C482 /* NumberFormatter+Tests.swift */,
 				166DA037267F40FD0003C482 /* UInt+formatter.swift */,
-				164C2B3B267DF05100396EE5 /* UIViewController+instantiate.swift */,
 				166DA04A267F467D0003C482 /* UInt+formatterTests.swift */,
+				164C2B3B267DF05100396EE5 /* UIViewController+instantiate.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
