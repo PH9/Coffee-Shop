@@ -1,8 +1,8 @@
 @testable import CoffeeShop
 import XCTest
 
-struct MyItem: Hashable {
-  let id: Int
+struct MyItem: Sellable {
+  let price: UInt
 }
 
 class SubscriberSpy: CartUpdateSubscriber {
@@ -20,8 +20,8 @@ class CartTests: XCTestCase {
   var sut: Cart<MyItem>!
   var subscriberSpy: SubscriberSpy!
 
-  let item0 = MyItem(id: 0)
-  let item1 = MyItem(id: 1)
+  let item0 = MyItem(price: 0)
+  let item1 = MyItem(price: 1)
 
   override func setUp() {
     super.setUp()
