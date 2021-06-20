@@ -1,27 +1,23 @@
 @testable import CoffeeShop
 import XCTest
 
-struct MyItem: Sellable {
-  let price: UInt
-}
-
 class SubscriberSpy: BasketUpdateSubscriber {
   var basketDidUpdateCalledCount = 0
-  var basketDidUpdateBasket: Basket<MyItem>?
-  var basketDidUpdateItems: [MyItem: UInt]?
+  var basketDidUpdateBasket: Basket<SellableItem>?
+  var basketDidUpdateItems: [SellableItem: UInt]?
   func basket<T>(_ basket: Basket<T>, didUpdate items: [T: UInt]) where T: Hashable {
     basketDidUpdateCalledCount += 1
-    basketDidUpdateBasket = basket as? Basket<MyItem>
-    basketDidUpdateItems = items as? [MyItem: UInt]
+    basketDidUpdateBasket = basket as? Basket<SellableItem>
+    basketDidUpdateItems = items as? [SellableItem: UInt]
   }
 }
 
 class BasketTests: XCTestCase {
-  var sut: Basket<MyItem>!
+  var sut: Basket<SellableItem>!
   var subscriberSpy: SubscriberSpy!
 
-  let item0 = MyItem(price: 0)
-  let item1 = MyItem(price: 1)
+  let item0 = SellableItem(price: 0)
+  let item1 = SellableItem(price: 1)
 
   override func setUp() {
     super.setUp()

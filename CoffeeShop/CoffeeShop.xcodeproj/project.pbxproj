@@ -21,6 +21,8 @@
 		166DA045267F44500003C482 /* CoffeeShopConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA044267F44500003C482 /* CoffeeShopConfigurator.swift */; };
 		166DA049267F450D0003C482 /* ImageSetterProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA048267F450D0003C482 /* ImageSetterProviderTests.swift */; };
 		166DA04B267F467D0003C482 /* UInt+formatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA04A267F467D0003C482 /* UInt+formatterTests.swift */; };
+		166DA04D267F479E0003C482 /* OrderButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA04C267F479E0003C482 /* OrderButtonTests.swift */; };
+		166DA04F267F48170003C482 /* SellableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA04E267F48170003C482 /* SellableItem.swift */; };
 		16997F68267DD160006AEDD2 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F67267DD160006AEDD2 /* ProductListInteractor.swift */; };
 		16997F71267DDA65006AEDD2 /* ImageSetterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F70267DDA65006AEDD2 /* ImageSetterProvider.swift */; };
 		16A6E603267EF84000EE5E8A /* BasketSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6E602267EF84000EE5E8A /* BasketSummaryViewController.swift */; };
@@ -67,6 +69,8 @@
 		166DA044267F44500003C482 /* CoffeeShopConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopConfigurator.swift; sourceTree = "<group>"; };
 		166DA048267F450D0003C482 /* ImageSetterProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSetterProviderTests.swift; sourceTree = "<group>"; };
 		166DA04A267F467D0003C482 /* UInt+formatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt+formatterTests.swift"; sourceTree = "<group>"; };
+		166DA04C267F479E0003C482 /* OrderButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButtonTests.swift; sourceTree = "<group>"; };
+		166DA04E267F48170003C482 /* SellableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellableItem.swift; sourceTree = "<group>"; };
 		16997F67267DD160006AEDD2 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		16997F70267DDA65006AEDD2 /* ImageSetterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSetterProvider.swift; sourceTree = "<group>"; };
 		16A6E602267EF84000EE5E8A /* BasketSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketSummaryViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 			children = (
 				16B8C14E267DBE6D0002B2BF /* Info.plist */,
 				164C2B36267DEACF00396EE5 /* Object+placeholder.swift */,
+				166DA04E267F48170003C482 /* SellableItem.swift */,
 				16B8C14C267DBE6D0002B2BF /* TestCase.swift */,
 			);
 			path = CoffeeShopTests;
@@ -236,6 +241,7 @@
 			children = (
 				16B8C169267DC9BF0002B2BF /* Order.storyboard */,
 				16B8C174267DCC3E0002B2BF /* OrderButton.swift */,
+				166DA04C267F479E0003C482 /* OrderButtonTests.swift */,
 				16B8C16B267DC9CD0002B2BF /* OrderViewController.swift */,
 			);
 			path = Order;
@@ -387,9 +393,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				164C2B37267DEACF00396EE5 /* Object+placeholder.swift in Sources */,
+				166DA04F267F48170003C482 /* SellableItem.swift in Sources */,
 				166DA049267F450D0003C482 /* ImageSetterProviderTests.swift in Sources */,
 				16B8C15D267DC2B90002B2BF /* StoreInfoViewControllerTests.swift in Sources */,
 				166DA03D267F430B0003C482 /* NumberFormatter+Tests.swift in Sources */,
+				166DA04D267F479E0003C482 /* OrderButtonTests.swift in Sources */,
 				164C2B33267DE5DC00396EE5 /* ProductListViewControllerTests.swift in Sources */,
 				16B8C14D267DBE6D0002B2BF /* TestCase.swift in Sources */,
 				166DA02F267F08810003C482 /* BasketTests.swift in Sources */,
