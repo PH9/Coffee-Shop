@@ -184,11 +184,11 @@
 		16B8C168267DC9960002B2BF /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				16B095AE267DFB0E000236D7 /* Cart.swift */,
+				166DA02E267F08810003C482 /* CartTests.swift */,
 				16B8C169267DC9BF0002B2BF /* Order.storyboard */,
 				16B8C174267DCC3E0002B2BF /* OrderButton.swift */,
 				16B8C16B267DC9CD0002B2BF /* OrderViewController.swift */,
-				16B095AE267DFB0E000236D7 /* Cart.swift */,
-				166DA02E267F08810003C482 /* CartTests.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
