@@ -23,7 +23,7 @@ public class BasketSummaryViewController: UITableViewController {
   }
 
   override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "BasketProductCell", for: indexPath)
+    let cell = tableView.dequeue(BasketProductCell.self, for: indexPath)
     return cell
   }
 }

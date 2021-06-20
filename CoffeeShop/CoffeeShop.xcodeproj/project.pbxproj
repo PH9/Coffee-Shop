@@ -24,6 +24,7 @@
 		166DA04D267F479E0003C482 /* OrderButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA04C267F479E0003C482 /* OrderButtonTests.swift */; };
 		166DA04F267F48170003C482 /* SellableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA04E267F48170003C482 /* SellableItem.swift */; };
 		166DA051267F49080003C482 /* OrderViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DA050267F49080003C482 /* OrderViewControllerTests.swift */; };
+		167F1F34267F4ED30057EAE6 /* UITableView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F1F33267F4ED30057EAE6 /* UITableView+dequeue.swift */; };
 		16997F68267DD160006AEDD2 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F67267DD160006AEDD2 /* ProductListInteractor.swift */; };
 		16997F71267DDA65006AEDD2 /* ImageSetterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997F70267DDA65006AEDD2 /* ImageSetterProvider.swift */; };
 		16A6E603267EF84000EE5E8A /* BasketSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6E602267EF84000EE5E8A /* BasketSummaryViewController.swift */; };
@@ -73,6 +74,7 @@
 		166DA04C267F479E0003C482 /* OrderButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButtonTests.swift; sourceTree = "<group>"; };
 		166DA04E267F48170003C482 /* SellableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellableItem.swift; sourceTree = "<group>"; };
 		166DA050267F49080003C482 /* OrderViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewControllerTests.swift; sourceTree = "<group>"; };
+		167F1F33267F4ED30057EAE6 /* UITableView+dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+dequeue.swift"; sourceTree = "<group>"; };
 		16997F67267DD160006AEDD2 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		16997F70267DDA65006AEDD2 /* ImageSetterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSetterProvider.swift; sourceTree = "<group>"; };
 		16A6E602267EF84000EE5E8A /* BasketSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketSummaryViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				166DA03C267F430B0003C482 /* NumberFormatter+Tests.swift */,
 				166DA037267F40FD0003C482 /* UInt+formatter.swift */,
 				166DA04A267F467D0003C482 /* UInt+formatterTests.swift */,
+				167F1F33267F4ED30057EAE6 /* UITableView+dequeue.swift */,
 				164C2B3B267DF05100396EE5 /* UIViewController+instantiate.swift */,
 			);
 			path = Library;
@@ -384,6 +387,7 @@
 				16B8C16C267DC9CD0002B2BF /* OrderViewController.swift in Sources */,
 				16B8C167267DC5140002B2BF /* ProductCell.swift in Sources */,
 				16B8C163267DC48D0002B2BF /* ProductListViewController.swift in Sources */,
+				167F1F34267F4ED30057EAE6 /* UITableView+dequeue.swift in Sources */,
 				166DA045267F44500003C482 /* CoffeeShopConfigurator.swift in Sources */,
 				16B095AF267DFB0E000236D7 /* Basket.swift in Sources */,
 				16B8C175267DCC3E0002B2BF /* OrderButton.swift in Sources */,

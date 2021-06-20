@@ -27,12 +27,8 @@ final class ProductListViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell else {
-      fatalError("Could not dequeue cell")
-    }
-
+    let cell = tableView.dequeue(ProductCell.self, for: indexPath)
     cell.configureWith((product: products[indexPath.row], basket: basket))
-
     return cell
   }
 }
