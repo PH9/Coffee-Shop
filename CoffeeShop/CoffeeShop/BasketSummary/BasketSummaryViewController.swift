@@ -2,11 +2,11 @@ import CoffeeShopAPI
 import UIKit
 
 public class BasketSummaryViewController: UITableViewController {
-  private weak var cart: Cart<Product>?
+  private weak var basket: Basket<Product>?
 
-  static func instantiate(cart: Cart<Product>) -> Self {
+  static func instantiate(basket: Basket<Product>) -> Self {
     let vc = instantiate()
-    vc.cart = cart
+    vc.basket = basket
     return vc
   }
 
@@ -17,7 +17,7 @@ public class BasketSummaryViewController: UITableViewController {
   }
 
   override public func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-    cart?.items.count ?? 0
+    basket?.items.count ?? 0
   }
 
   override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

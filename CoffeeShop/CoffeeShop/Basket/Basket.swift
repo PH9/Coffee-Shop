@@ -1,18 +1,18 @@
 import CoffeeShopAPI
 
-protocol CartUpdateSubscriber: AnyObject {
-  func cart<T: Sellable>(_ cart: Cart<T>, didUpdate items: [T: UInt])
+protocol BasketUpdateSubscriber: AnyObject {
+  func basket<T: Sellable>(_ basket: Basket<T>, didUpdate items: [T: UInt])
 }
 
 protocol Sellable: Hashable {
   var price: UInt { get }
 }
 
-final class Cart<T: Sellable> {
+final class Basket<T: Sellable> {
   private(set) var items: [T: UInt] = [:] {
     didSet {
       subscribers.forEach { subscriber in
-        subscriber.cart(self, didUpdate: items)
+        subscriber.basket(self, didUpdate: items)
       }
     }
   }
@@ -52,8 +52,8 @@ final class Cart<T: Sellable> {
     return count
   }
 
-  private var subscribers: [CartUpdateSubscriber] = []
-  func subscribeToUpdate(subscriber: CartUpdateSubscriber) {
+  private var subscribers: [BasketUpdateSubscriber] = []
+  func subscribeToUpdate(subscriber: BasketUpdateSubscriber) {
     subscribers.append(subscriber)
   }
 }

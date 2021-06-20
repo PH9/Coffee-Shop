@@ -4,7 +4,7 @@ import UIKit
 extension Product: Sellable {}
 
 public final class OrderViewController: UIViewController {
-  internal var cart = Cart<Product>()
+  internal var basket = Basket<Product>()
   weak var productListViewController: ProductListViewController?
 
   @IBOutlet var controlView: UIView!
@@ -13,8 +13,8 @@ public final class OrderViewController: UIViewController {
   override public func viewDidLoad() {
     super.viewDidLoad()
     controlView <~ rounded
-    cart.subscribeToUpdate(subscriber: self)
-    productListViewController?.cart = cart
+    basket.subscribeToUpdate(subscriber: self)
+    productListViewController?.basket = basket
   }
 
   override public func viewWillAppear(_ animated: Bool) {
@@ -23,7 +23,7 @@ public final class OrderViewController: UIViewController {
   }
 
   deinit {
-    cart = Cart<Product>()
+    basket = Basket<Product>()
   }
 
   override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,13 +39,13 @@ public final class OrderViewController: UIViewController {
   }
 
   @IBAction func gotoBasketSummary(_: Any) {
-    let vc = BasketSummaryViewController.instantiate(cart: cart)
+    let vc = BasketSummaryViewController.instantiate(basket: basket)
     present(vc, animated: true, completion: nil)
   }
 }
 
-extension OrderViewController: CartUpdateSubscriber {
-  func cart<T>(_: Cart<T>, didUpdate items: [T: UInt]) where T: Hashable {
+extension OrderViewController: BasketUpdateSubscriber {
+  func basket<T>(_: Basket<T>, didUpdate items: [T: UInt]) where T: Hashable {
     gotoBasketSummaryButton.configureWith(items)
   }
 }

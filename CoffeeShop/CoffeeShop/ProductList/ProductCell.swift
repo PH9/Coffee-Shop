@@ -10,7 +10,7 @@ final class ProductCell: UITableViewCell {
   @IBOutlet var plusButton: UIButton!
 
   private var product: Product!
-  private weak var cart: Cart<Product>!
+  private weak var basket: Basket<Product>!
 
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -18,9 +18,9 @@ final class ProductCell: UITableViewCell {
     itemCountTextField.delegate = self
   }
 
-  func configureWith(_ value: (product: Product, cart: Cart<Product>)) {
+  func configureWith(_ value: (product: Product, basket: Basket<Product>)) {
     product = value.product
-    cart = value.cart
+    basket = value.basket
     productImageView.setImage(with: product.imageURL)
     productNameLabel.text = product.name
     productPriceLabel.text = "\(product.price)"
@@ -28,12 +28,12 @@ final class ProductCell: UITableViewCell {
 
   @IBAction func reduceItem(_ sender: UITextField) {
     _ = textFieldShouldReturn(sender)
-    itemCountTextField.text = "\(cart.reduce(item: product))"
+    itemCountTextField.text = "\(basket.reduce(item: product))"
   }
 
   @IBAction func addItem(_ sender: UITextField) {
     _ = textFieldShouldReturn(sender)
-    itemCountTextField.text = "\(cart.add(item: product))"
+    itemCountTextField.text = "\(basket.add(item: product))"
   }
 }
 
@@ -43,7 +43,7 @@ extension ProductCell: UITextFieldDelegate {
       return true
     }
 
-    itemCountTextField.text = "\(cart.set(item: product, count: count))"
+    itemCountTextField.text = "\(basket.set(item: product, count: count))"
     endEditing(false)
     return true
   }
