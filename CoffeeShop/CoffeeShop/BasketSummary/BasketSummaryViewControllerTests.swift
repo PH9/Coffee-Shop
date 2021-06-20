@@ -7,13 +7,19 @@ class BasketSummaryViewControllerTests: TestCase {
 
   override func setUp() {
     super.setUp()
-    let basket: Basket<Product> = Basket()
-    basket.add(item: Product(name: "Americano", price: 50, imageURL: .placeholder))
-    basket.add(item: Product(name: "Espresso", price: 40, imageURL: .placeholder))
-    basket.add(item: Product(name: "Mineral", price: 120, imageURL: .placeholder))
-    sut = BasketSummaryViewController.instantiate(basket: basket)
+    sut = BasketSummaryViewController.instantiate(items: makeItems())
     sut.view.frame = CGRect(x: 0, y: 0, width: 320, height: 568)
   }
 
-  func testView() {}
+  func testView() {
+    FBSnapshotVerifyView(sut.view)
+  }
+
+  private func makeItems() -> [(Product, UInt)] {
+    [
+      (Product(name: "Americano", price: 50, imageURL: .placeholder), 2),
+      (Product(name: "Espresso", price: 40, imageURL: .placeholder), 3),
+      (Product(name: "Mineral", price: 120, imageURL: .placeholder), 1),
+    ]
+  }
 }

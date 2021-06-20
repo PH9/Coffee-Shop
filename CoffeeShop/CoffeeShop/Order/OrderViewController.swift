@@ -40,7 +40,7 @@ public final class OrderViewController: UIViewController {
   }
 
   @IBAction func gotoBasketSummary(_: Any) {
-    let vc = BasketSummaryViewController.instantiate(basket: basket)
+    let vc = BasketSummaryViewController.instantiate(items: Array(_immutableCocoaArray: basket))
     present(vc, animated: true, completion: nil)
   }
 }

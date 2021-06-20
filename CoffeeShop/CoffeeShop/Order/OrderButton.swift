@@ -20,23 +20,20 @@ class OrderButton: UIButton {
     setTitle("Checkout", for: .normal)
     setupTotalItemCount()
     setupTotalPriceLabel()
+    isEnabled = false
   }
 
   func configureWith<T: Sellable>(_ value: [T: UInt]) {
-    var totalItem: UInt = 0
-    var totalPrice: UInt = 0
-    value.forEach { item, count in
-      totalItem += count
-      totalPrice += item.price * count
-    }
-
-    totalItemCountLabel.text = "\(totalItem)"
-    totalPriceLabel.text = "\(totalPrice.toCurrency())"
+    let (totalItem, totalPrice, shouldEnable) = makeTexts(value)
+    totalItemCountLabel.text = totalItem
+    totalItemCountLabel.isHidden = !shouldEnable
+    totalPriceLabel.text = totalPrice
+    totalPriceLabel.isHidden = !shouldEnable
+    isEnabled = shouldEnable
   }
 
   private func setupTotalItemCount() {
-    totalItemCountLabel.text = "0"
-    totalItemCountLabel.textColor = .white
+    totalItemCountLabel.text = ""
     addSubview(totalItemCountLabel)
     totalItemCountLabel.translatesAutoresizingMaskIntoConstraints = false
     totalItemCountLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
@@ -45,13 +42,24 @@ class OrderButton: UIButton {
   }
 
   private func setupTotalPriceLabel() {
-    totalPriceLabel.text = "0"
-    totalPriceLabel.textColor = .white
+    totalPriceLabel.text = ""
     totalPriceLabel.textAlignment = .right
     addSubview(totalPriceLabel)
     totalPriceLabel.translatesAutoresizingMaskIntoConstraints = false
     totalPriceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16).isActive = true
     totalPriceLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     bringSubviewToFront(totalPriceLabel)
+  }
+
+  typealias Texts = (totalItem: String, totalPrice: String, shouldEnable: Bool)
+  private func makeTexts<T: Sellable>(_ value: [T: UInt]) -> Texts {
+    var totalItem: UInt = 0
+    var totalPrice: UInt = 0
+    value.forEach { item, count in
+      totalItem += count
+      totalPrice += item.price * count
+    }
+
+    return ("\(totalItem)", "\(totalPrice.toCurrency())", totalItem > 0)
   }
 }

@@ -4,9 +4,9 @@ import UIKit
 public class BasketSummaryViewController: UITableViewController {
   var dataSource: BasketSummaryDataSource!
 
-  static func instantiate(basket: Basket<Product>) -> Self {
+  static func instantiate(items: [(Product, UInt)]) -> Self {
     let vc = instantiate()
-    vc.dataSource = BasketSummaryDataSource(basket: basket)
+    vc.dataSource = BasketSummaryDataSource(items: items)
     return vc
   }
 

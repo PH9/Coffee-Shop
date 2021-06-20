@@ -2,19 +2,19 @@ import CoffeeShopAPI
 import UIKit
 
 final class BasketSummaryDataSource: NSObject, UITableViewDataSource {
-  private weak var basket: Basket<Product>?
+  private let items: [(Product, UInt)]
 
-  init(basket: Basket<Product>) {
-    self.basket = basket
+  init(items: [(Product, UInt)]) {
+    self.items = items
   }
 
   public func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-    basket?.items.count ?? 0
+    items.count
   }
 
   public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeue(BasketProductCell.self, for: indexPath)
-    let (product, itemCount) = Array(basket!.items)[indexPath.row]
+    let (product, itemCount) = items[indexPath.row]
     cell.configureWith(convertProductToBasketProduct(product: product, itemCount: itemCount))
     return cell
   }
