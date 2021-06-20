@@ -38,9 +38,13 @@ final class Cart<T: Hashable> {
     return count
   }
 
-  func set(item: T, count: UInt?) -> UInt {
-    items[item] = count ?? items[item]
-    return items[item] ?? 0
+  func set(item: T, count: UInt) -> UInt {
+    if count == 0 {
+      items[item] = nil
+    } else {
+      items[item] = count
+    }
+    return count
   }
 
   private var subscribers: [CartUpdateSubscriber] = []
