@@ -31,7 +31,7 @@ final class OrderButton: UIButton {
     }
 
     totalItemCountLabel.text = "\(totalItem)"
-    totalPriceLabel.text = "\(toCurrency(number: totalPrice))"
+    totalPriceLabel.text = "\(totalPrice.toCurrency())"
   }
 
   private func setupTotalItemCount() {
@@ -53,15 +53,5 @@ final class OrderButton: UIButton {
     totalPriceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16).isActive = true
     totalPriceLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     bringSubviewToFront(totalPriceLabel)
-  }
-
-  private func toCurrency(number: UInt) -> String {
-    let priceFormatter = NumberFormatter()
-    priceFormatter.numberStyle = .currency
-    priceFormatter.currencySymbol = ""
-    priceFormatter.maximumFractionDigits = 0
-
-    let nsNumber = NSNumber(value: number)
-    return priceFormatter.string(from: nsNumber) ?? "\(number)"
   }
 }
