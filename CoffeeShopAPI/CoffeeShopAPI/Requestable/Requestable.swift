@@ -4,6 +4,8 @@ public protocol Requestable {
   var method: HTTPMethod { get }
   var url: URL { get }
   var path: String { get }
+  associatedtype ParameterType: Encodable
+  var parameters: ParameterType? { get }
   var expectedStatusCode: ClosedRange<Int> { get }
   associatedtype ResponseType: Decodable
   @discardableResult func request(
@@ -16,6 +18,10 @@ public protocol Requestable {
 public extension Requestable {
   var method: HTTPMethod {
     .get
+  }
+
+  var parameters: Empty? {
+    nil
   }
 
   var url: URL {
@@ -32,6 +38,9 @@ public extension Requestable {
   ) -> Cancellable {
     var request = URLRequest(url: url)
     request.httpMethod = method.rawValue
+    if method == .post, let parameters = parameters {
+      request.httpBody = try? JSONEncoder().encode(parameters)
+    }
 
     let task = urlSession.dataTask(with: request) { data, response, error in
       if let error = error {

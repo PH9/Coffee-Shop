@@ -1,1 +1,0 @@
-public struct EmptyResponse: Decodable {}
