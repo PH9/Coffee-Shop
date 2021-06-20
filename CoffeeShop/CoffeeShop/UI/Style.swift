@@ -17,3 +17,10 @@ let rounded: Style<UIView> = { view in
   view.layer.cornerRadius = 3
   return view
 }
+
+let button: Style<UIButton> = { view in
+  view <~ rounded
+  view.backgroundColor = .systemBlue
+  view.setTitleColor(.white, for: .normal)
+  return view
+}

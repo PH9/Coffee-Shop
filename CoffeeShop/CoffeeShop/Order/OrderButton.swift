@@ -16,9 +16,7 @@ final class OrderButton: UIButton {
   }
 
   private func initialize() {
-    self <~ rounded
-    backgroundColor = .systemBlue
-    setTitleColor(.white, for: .normal)
+    self <~ button
     setTitle("Checkout", for: .normal)
     setupTotalItemCount()
     setupTotalPriceLabel()
