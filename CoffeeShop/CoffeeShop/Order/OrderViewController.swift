@@ -37,6 +37,11 @@ public final class OrderViewController: UIViewController {
 
     addChild(segue.destination)
   }
+
+  @IBAction func gotoBasketSummary(_: Any) {
+    let vc = BasketSummaryViewController.instantiate(cart: cart)
+    present(vc, animated: true, completion: nil)
+  }
 }
 
 extension OrderViewController: CartUpdateSubscriber {
