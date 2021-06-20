@@ -7,8 +7,6 @@ public final class OrderViewController: UIViewController {
   internal var cart = Cart<Product>()
   weak var productListViewController: ProductListViewController?
 
-  @IBOutlet var totalItemLabel: UILabel!
-  @IBOutlet var totalPriceLabel: UILabel!
   @IBOutlet var controlView: UIView!
   @IBOutlet var gotoBasketSummaryButton: OrderButton!
 
