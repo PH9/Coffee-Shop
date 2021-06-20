@@ -26,6 +26,7 @@ final class Cart<T: Hashable> {
 
   func reduce(item: T) -> UInt {
     guard var count = items[item] else {
+      items[item] = nil
       return 0
     }
 
