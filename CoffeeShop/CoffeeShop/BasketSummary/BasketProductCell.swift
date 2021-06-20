@@ -3,8 +3,8 @@ import UIKit
 struct BasketProduct {
   let imageURL: URL
   let name: String
-  let price: Int
-  let itemCount: Int
+  let price: UInt
+  let itemCount: UInt
 }
 
 class BasketProductCell: UITableViewCell {

@@ -17,6 +17,7 @@ final class Basket<T: Sellable> {
     }
   }
 
+  @discardableResult
   func add(item: T) -> UInt {
     guard var count = items[item] else {
       items[item] = 1
@@ -28,6 +29,7 @@ final class Basket<T: Sellable> {
     return count
   }
 
+  @discardableResult
   func reduce(item: T) -> UInt {
     guard var count = items[item] else {
       items[item] = nil
@@ -43,6 +45,7 @@ final class Basket<T: Sellable> {
     return count
   }
 
+  @discardableResult
   func set(item: T, count: UInt) -> UInt {
     if count == 0 {
       items[item] = nil
