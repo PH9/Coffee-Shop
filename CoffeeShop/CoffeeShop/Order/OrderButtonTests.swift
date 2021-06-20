@@ -1,7 +1,7 @@
 @testable import CoffeeShop
 import XCTest
 
-class OrderButtonTests: TestCase {
+final class OrderButtonTests: TestCase {
   var sut: OrderButton!
 
   override func setUp() {

@@ -12,6 +12,7 @@ public final class OrderViewController: UIViewController {
 
   override public func viewDidLoad() {
     super.viewDidLoad()
+    title = "Order"
     controlView <~ rounded
     basket.subscribeToUpdate(subscriber: self)
     productListViewController?.basket = basket

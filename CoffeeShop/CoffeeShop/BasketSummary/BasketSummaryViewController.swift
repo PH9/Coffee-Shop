@@ -12,6 +12,8 @@ public class BasketSummaryViewController: UITableViewController {
 
   override public func viewDidLoad() {
     super.viewDidLoad()
+    title = "Checkout"
+    navigationController?.setNavigationBarHidden(false, animated: true)
     tableView.estimatedRowHeight = 105
     tableView.rowHeight = UITableView.automaticDimension
   }

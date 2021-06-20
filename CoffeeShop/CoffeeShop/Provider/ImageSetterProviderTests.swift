@@ -17,12 +17,11 @@ final class ImageSetterProviderTests: XCTestCase {
     let spy = ImageSetterProviderSpy()
     CoffeeShopConfigurator.setSetImageProvider(spy)
     let imageView = UIImageView()
-    let placeholderURL = URL(string: "https://localhost")!
 
-    imageView.setImage(with: placeholderURL)
+    imageView.setImage(with: .placeholder)
 
     XCTAssertEqual(spy.setImageCalledCount, 1)
-    XCTAssertEqual(spy.setImageURL, placeholderURL)
+    XCTAssertEqual(spy.setImageURL, .placeholder)
     XCTAssertEqual(spy.setImageImageView, imageView)
   }
 }

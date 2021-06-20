@@ -1,7 +1,7 @@
 import UIKit.UIControl
 
 @IBDesignable
-final class OrderButton: UIButton {
+class OrderButton: UIButton {
   let totalItemCountLabel = UILabel()
   let totalPriceLabel = UILabel()
 
